@@ -32,3 +32,10 @@ O conteúdo se baseia primariamente sobre o [MDN](https://developer.mozilla.org/
 
 ### Javascript
 
+
+### Outros recursos
+
+Abaixo estão outros recursos que podem lhe auxiliar a aprender desenvolvimento Web. Apesar deste **não ser o conteúdo que será cobrado em provas e trabalhos**, ele pode ajudar e muito no seu aprendizado do conteúdo.
+
+* [Fundação Bradesco](https://www.ev.org.br/areas-de-interesse/tecnologia)
+* [Grasshopper](https://grasshopper.app/pt_br/)
