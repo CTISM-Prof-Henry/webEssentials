@@ -6,6 +6,11 @@ O conteúdo se baseia primariamente sobre o [MDN](https://developer.mozilla.org/
 
 ## Sumário
 
+### HTTP
+
+* [Visão geral](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Overview)
+* [Cookies](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Cookies)
+
 ### HTML
 
 * [Introdução](https://developer.mozilla.org/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
@@ -32,6 +37,8 @@ O conteúdo se baseia primariamente sobre o [MDN](https://developer.mozilla.org/
 
 ### Javascript
 
+* [Introdução](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/First_steps)
+* [Elementos básicos](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Building_blocks)
 
 ### Outros recursos
 
