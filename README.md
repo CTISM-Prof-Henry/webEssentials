@@ -6,6 +6,12 @@ O conteúdo se baseia primariamente sobre o [MDN](https://developer.mozilla.org/
 
 ## Sumário
 
+### Fundamentos Web
+
+Apostila (disponível junto com o repositório)
+
+* <a href="fundamentos_desenvolvimento_web (pronatec).pdf#page=15">Como tudo começou (pp. 15-20)</a>
+
 ### HTTP
 
 * [Visão geral](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Overview)
