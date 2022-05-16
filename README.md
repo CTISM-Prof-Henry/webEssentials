@@ -12,10 +12,14 @@ Apostila (disponível junto com o repositório)
 
 * <a href="fundamentos_desenvolvimento_web (pronatec).pdf#page=15">Como tudo começou (pp. 15-20)</a>
 
+### Design de sites
+
+* [Princípios fundamentais de web design](https://desenvolvimentoparaweb.com/ux/4-principios-fundamentais-design/)
+
 ### HTTP
 
 * [Visão geral](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Overview)
-* [Cookies](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Cookies)
+* [HTTP, HTML e protocolo REST](https://tableless.com.br/o-grande-desencontro-http-com-o-html/)
 
 ### HTML
 
@@ -45,6 +49,7 @@ Apostila (disponível junto com o repositório)
 
 * [Introdução](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/First_steps)
 * [Elementos básicos](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Building_blocks)
+* [Cookies](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Cookies)
 
 ### Outros recursos
 
