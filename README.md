@@ -15,6 +15,7 @@ Apostila (disponível junto com o repositório)
 ### Design de sites
 
 * [Princípios fundamentais de web design](https://desenvolvimentoparaweb.com/ux/4-principios-fundamentais-design/)
+* [Heurísticas de Nielsen](https://brasil.uxdesign.cc/10-heur%C3%ADsticas-de-nielsen-para-o-design-de-interface-58d782821840)
 
 ### HTTP
 
