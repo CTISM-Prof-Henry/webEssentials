@@ -6,6 +6,14 @@ O conteúdo se baseia primariamente sobre o [MDN](https://developer.mozilla.org/
 
 ## Sumário
 
+* [Fundamentos Web](#fundamentos-web)
+* [Design de sites](#design-de-sites)
+* [HTTP](#http)
+* [HTML](#html)
+* [CSS](#css)
+* [Javascript](#javascript)
+* [Outros recursos](#outros-recursos)
+
 ### Fundamentos Web
 
 Apostila (disponível junto com o repositório)
@@ -51,6 +59,12 @@ Apostila (disponível junto com o repositório)
 * [Introdução](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/First_steps)
 * [Elementos básicos](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Building_blocks)
 * [Cookies](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Cookies)
+
+### Atividades
+
+#### HTML
+
+* [Reproduzir uma página Markdown em HTML e CSS]()
 
 ### Outros recursos
 
