@@ -64,7 +64,7 @@ Apostila (disponível junto com o repositório)
 
 #### HTML
 
-* [Reproduzir uma página Markdown em HTML e CSS]()
+* [Reproduzir uma página Markdown em HTML e CSS](atividades/markdown_reproduce.md)
 
 ### Outros recursos
 
