@@ -2,7 +2,8 @@
 
 Esse repositório visa organizar os conteúdos que serão dados durante o ano de 2022 na disciplina de Projeto e Desenvolvimento de Interfaces para Internet.
 
-O conteúdo se baseia primariamente sobre o [MDN](https://developer.mozilla.org/pt-BR/), mas outros materiais poderão ser usados.
+O conteúdo se baseia primariamente sobre o [MDN](https://developer.mozilla.org/pt-BR/) e 
+[W3 Schools](https://www.w3schools.com) mas outros materiais poderão ser usados.
 
 ## Sumário
 
@@ -39,6 +40,9 @@ Apostila (disponível junto com o repositório)
 * [Mais sobre elementos textuais](https://developer.mozilla.org/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
 * [Organizando estruturalmente a página](https://developer.mozilla.org/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
 * [Tabelas em HTML (em inglês)](https://developer.mozilla.org/en-US/docs/Learn/HTML/Tables/Basics)
+* [Formulários (em inglês)](https://www.w3schools.com/html/html_forms.asp)
+    * [Todos os tipos de formulário (em inglẽs)](https://www.w3schools.com/html/html_form_elements.asp)
+    * [Todos os tipos de input (em inglẽs)](https://www.w3schools.com/html/html_form_input_types.asp)
 
 ### CSS
 
@@ -70,5 +74,6 @@ Apostila (disponível junto com o repositório)
 
 Abaixo estão outros recursos que podem lhe auxiliar a aprender desenvolvimento Web. Apesar deste **não ser o conteúdo que será cobrado em provas e trabalhos**, ele pode ajudar e muito no seu aprendizado do conteúdo.
 
+* [Hora do Código: Minecraft (em inglês)](https://code.org/minecraft)
 * [Fundação Bradesco](https://www.ev.org.br/areas-de-interesse/tecnologia)
 * [Grasshopper](https://grasshopper.app/pt_br/)
