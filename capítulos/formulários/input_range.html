@@ -2,9 +2,21 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>O input type range</title>
 </head>
 <body>
-
+<h1>Para que serve o input type="range"?🤔</h1>
+<p>Ele define um valor dentro de um intervalo que geralmente não é importante, pois é mais utilizado para fazer controles deslizantes.</p>
+<p>O valor padrão do intervalo vai de 0 a 100.</p>
+<p>Veja um exemplo a seguir: </p>
+<form>
+  <label for="vol">Controle (entre 0 e 5):</label>
+  <input type="range" id="vol" name="vol" min="0" max="5">
+</form>
+<p>Existem duas tags que se colocam dentro do input para definir o intervalo dos números no controle: </p>
+<ul>
+	<li><b>min=" "</b> - Para o menor número</li>
+	<li><b>max=" "</b> - Para o maior número</li>
+</ul>
 </body>
 </html>
