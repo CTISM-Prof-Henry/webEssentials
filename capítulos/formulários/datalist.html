@@ -1,10 +1,32 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <title></title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <title>Formulário Datalist</title>
+    </head>
 <body>
+
+<h2>Formulário datalist</h2>
+
+<p>O Formulário "Datalist" mostra uma aba de opções pré-definidas do Formulário "Input"</p>
+<p>Usuários quando clicarem na caixa verão ums lista de opções pré-definidas quando foram botar os dados</p>
+<p>A lista atribuida ao "input" deve referir ao "id" atribuido do formulário "datalist"</p>
+<p>Teste abaixo clicando duas vezes na caixa</p>
+
+<form>
+  <input list="browsers" name="browser">
+  <datalist id="browsers">
+    <option value="Internet Explorer">
+    <option value="Firefox">
+    <option value="Chrome">
+    <option value="Opera">
+    <option value="Safari">
+  </datalist>
+  <input type="submit">
+</form>
+
+<p></p>
 
 </body>
 </html>
+
