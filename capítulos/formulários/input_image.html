@@ -2,9 +2,43 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <style>
+    	body{
+    		background-color: #000000
+    	}
+    </style>
+    <title>Formulários</title>
+    <center>
+    
 </head>
-<body>
 
+
+<body>
+	<h1 style="color: #FFFFFF">Formulário "Input Image"</h1>
+	<br/><br/><br/>
+<p style="color: #FFFFFF" style="font-size: 50px">O Input image é utilizado como botão de submit 
+</p><br/>
+
+<p style="color: #FFFFFF" style="font-size: 50px">Código fonte:</p><br/>
+
+<p style="color: #FFFFFF"> input type="image" src="button.png" alt="submit" ></p>
+
+<p style="color: #FFFFFF"> Outro exemplo:</p>
+
+<a href="https://carbon.now.sh/?bg=rgba%28255%2C255%2C255%2C0%29&t=vscode&wt=none&l=htmlmixed&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%253Cform%2520id%253D%2522frmImage%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%253Cdiv%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Clabel%2520for%253D%2522nome%2522%253EInforme%2520o%2520seu%2520nome%253A%253C%252Flabel%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cinput%2520type%253D%2522text%2522%2520id%253D%2522nome%2522%2520name%253D%2522nome%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%253Cdiv%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cinput%2520type%253D%2522image%2522%2520src%253D%2522button.png%2522%2520alt%253D%2522Submit%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%253C%252Fdiv%253E%250A%2520%253C%252Fform%253E%250A%2520%253Cp%2520id%253D%2522resultado%2522%253E%253C%252Fp%253E%250A%2520%253Cscript%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520document.getElementById%28%2522frmImage%2522%29.onsubmit%2520%253D%2520function%2520%28%29%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520let%2520frmImg%2520%253D%2520document.getElementById%28%27frmImage%27%29.elements%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520document.getElementById%28%2522resultado%2522%29.innerHTML%2520%253D%2520%2520%2522Ol%25C3%25A1%252C%2520%2522%2520%252B%2520frmImg%255B%27nome%27%255D.value%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520return%2520false%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%257D%253B%250A%2520%253C%252Fscript%253E%2520%2520%2520"> <img src="https://u3r3f6s2.rocketcdn.me/wp-content/uploads/2021/01/image-64-1024x534.png.webp"></a>
+<p style="color: #FFFFFF"> aperte na imagem para ir para o código</p>
+<br/>
+<br>
+<br>
+<p style="color: #FFFFFF"> Resultado:</p>
+<form id="frmImage">
+        <div>
+            <label for="nome">Informe o seu nome:</label>
+            <input type="text" id="nome" name="nome">
+        </div>
+        <div>
+            
+
+</center>
 </body>
 </html>

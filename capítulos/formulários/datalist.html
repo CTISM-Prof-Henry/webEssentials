@@ -1,32 +1,30 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Formulário Datalist</title>
-    </head>
-<body>
+  <head>
+    <meta charset="UTF-8">
+    <title>Formulário Datalist</title>
+  </head>
+  <body>
 
-<h2>Formulário datalist</h2>
+    <h1>Formulário datalist</h1>
 
-<p>O Formulário "Datalist" mostra uma aba de opções pré-definidas do Formulário "Input"</p>
-<p>Usuários quando clicarem na caixa verão ums lista de opções pré-definidas quando foram botar os dados</p>
-<p>A lista atribuida ao "input" deve referir ao "id" atribuido do formulário "datalist"</p>
-<p>Teste abaixo clicando duas vezes na caixa</p>
-
-<form>
-  <input list="browsers" name="browser">
-  <datalist id="browsers">
-    <option value="Internet Explorer">
-    <option value="Firefox">
-    <option value="Chrome">
-    <option value="Opera">
-    <option value="Safari">
-  </datalist>
-  <input type="submit">
-</form>
-
-<p></p>
-
-</body>
+    <p>O Formulário "Datalist" mostra uma aba de opções pré-definidas do Formulário "Input"</p>
+    <p>Usuários quando clicarem na caixa verão uma lista de opções pré-definidas quando foram botar os dados</p>
+    <p>A lista atribuida ao "input" deve referir ao "id" atribuido do formulário "datalist"</p>
+    <p>Teste abaixo clicando duas vezes na caixa</p>
+  
+    </form>
+      <label for="Site">Qual seu site favorito?</label>
+      <input list="Site">
+      <datalist id="Site">
+      <option value="Twitch">
+      <option value="Youtube">
+      <option value="Instagram">
+      <option value="Twitter">
+      <option value="Discord">
+      <option value="Facebook">
+      </datalist><br/>
+      <input type="submit" name="Enviar">  
+    </form>
+  </body>
 </html>
-
