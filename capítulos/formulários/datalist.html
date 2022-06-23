@@ -2,9 +2,36 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>O QUE É DATALIST?</title>
 </head>
 <body>
 
+	<h1>Datalist é um elemento que especifica uma lista de opções predefinidas para um "< input >" elemento.</h1>
+
+	<p>Os usuários irão ver uma lista suspensa das opções predefinidas à medida que inserem dados.</p>
+	<p>O "list" atributo do "< input >" elemento deve se referir ao "id" atributo do "< datalist >" elemento.</p><br/>
+
+
+		<form>
+		<label for="Usuário">Qual seu nome?</label><br/>
+		<input type="text" name="nome"><br/>
+
+
+
+	</form><br/>
+
+<label for="Site">Qual seu site favorito?</label>
+<form action="/action_page.php">
+  <input list="Site">
+  <datalist id="Site">
+    <option value="Twitch">
+    <option value="Youtube">
+    <option value="Instagram">
+    <option value="Twitter">
+    <option value="Discord">
+    <option value="Facebook">
+  </datalist><br/>
+	<input type="submit" name="Enviar">  
+</form>
 </body>
 </html>
