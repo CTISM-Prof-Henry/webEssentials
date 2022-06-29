@@ -1,6 +1,6 @@
 # Vai dar namoro
 
-O objetivo desta atividade é você **reproduzir esta página em HTML.**
+O objetivo desta atividade é você **reproduzir esta página em HTML.** (deixe o CSS de lado por enquanto!)
 
 Crie um novo arquivo **main.html** em algum lugar do seu computador, 
 e abra-o com o Sublime Text.
