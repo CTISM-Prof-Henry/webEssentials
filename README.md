@@ -66,12 +66,8 @@ Apostila (disponível junto com o repositório)
 
 ### Atividades
 
-#### HTML
-
-* [Reproduzir uma página Markdown em HTML](atividades/reproduzir_markdown.md)
-
-#### CSS
-
+* [Vai dar namoro em HTML](atividades/reproduzir_markdown.md)
+* [Vai dar namoro em CSS](atividades/markdown_v2.md)
 * [Reproduzir site do Bing em HTML + CSS](atividades/reproduzir_bing.md)
 
 ### Outros recursos
