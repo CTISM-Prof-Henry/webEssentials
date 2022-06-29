@@ -69,11 +69,10 @@ Apostila (disponível junto com o repositório)
 #### HTML
 
 * [Reproduzir uma página Markdown em HTML](atividades/reproduzir_markdown.md)
-* [Reproduzir site do Bing em HTML + CSS](atividades/reproduzir_bing.md)
 
 #### CSS
 
-* []
+* [Reproduzir site do Bing em HTML + CSS](atividades/reproduzir_bing.md)
 
 ### Outros recursos
 
