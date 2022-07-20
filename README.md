@@ -55,6 +55,7 @@ Apostila (disponível junto com o repositório)
 * [Estilizando links (em inglês)](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Styling_links)
 * [Fontes da Web (em inglês)](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Web_fonts)
 * [Cascata e herança](https://developer.mozilla.org/pt-BR/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+* [O modelo em caixa](https://developer.mozilla.org/pt-BR/docs/Learn/CSS/Building_blocks/The_box_model)
 * [Seletores em CSS](https://developer.mozilla.org/pt-BR/docs/Learn/CSS/Building_blocks/Selectors)
 * [Outros tópicos sobre CSS](https://developer.mozilla.org/pt-BR/docs/Learn/CSS/Building_blocks)
 
