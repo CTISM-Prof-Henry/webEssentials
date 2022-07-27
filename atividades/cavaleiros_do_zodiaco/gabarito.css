@@ -1,0 +1,17 @@
+* {
+    font-family: Verdana, sans-serif;
+}
+
+table, th, tr, td {
+    border: 1px solid black;
+    background-color: bisque;
+}
+
+img {
+    height: 400px;
+}
+
+.center {
+    margin: auto;
+    width: 50%;
+}

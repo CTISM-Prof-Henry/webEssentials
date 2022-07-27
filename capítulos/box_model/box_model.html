@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Box Model</title>
+    <style>
+        * {
+            font-family: Verdana, sans-serif;
+            font-size: 14pt;
+        }
+
+        .visivel {
+            width: 300px;
+            border: 15px solid green;
+            padding: 50px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+<h1>Box Model</h1>
+
+<p class="visivel">
+    Este parágrafo está testando todas as propriedades do modelo em caixa do CSS
+</p>
+<ul>
+    <li>O <b>conteúdo</b> fica no centro (o texto);</li>
+    <li>O <b>Padding</b> é o espaço que existe entre o conteúdo e a borda;</li>
+    <ul>
+        <li>Segundo o CSS, é de 50 pixels;</li>
+    </ul>
+    <li>A <b>borda</b> delimita o conteúdo visualmente;</li>
+    <ul>
+        <li>Segundo o CSS, ela tem 15 pixels de espessura;</li>
+    </ul>
+    <li>A <b>margem</b> é o espaço que tem entre dois elementos.</li>
+    <ul>
+        <li>Segundo o CSS, ela tem 20 pixels. Ou seja, existe um intervalo de 20 pixels entre a <b>borda</b> e
+            esta lista!</li>
+    </ul>
+</ul>
+
+</body>
+</html>
