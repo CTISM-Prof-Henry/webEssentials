@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercícios Javascript</title>
+    <style>
+        :root {  /* Garante que estará disponível em qualquer bloco de código */
+            --area-width: 300px;
+            --area-height: 100px;
+        }
+
+        .center {
+            margin: auto;
+            width: 50%;
+        }
+
+        .expected_answer {
+            color: black;
+            background-color: white;
+            border: 1px solid black;
+            width: var(--area-width);
+        }
+
+        .wrong_answer {
+            color: white;
+            background-color: darkred;
+            border: 1px solid black;
+            width: var(--area-width);
+        }
+
+        .correct_answer {
+            color: black;
+            background-color: yellowgreen;
+            border: 1px solid black;
+            width: var(--area-width);
+        }
+    </style>
+</head>
+<body>
+
+<div class="center">
+    <div class="center">
+        <h1>Exercícios</h1>
+    </div>
+    <h2>Faça um Programa que mostre a mensagem "Olá mundo!" na tela.</h2>
+
+    <form>
+        <label for="input_exercise_01">Entrada</label><br/>
+        <textarea id="input_exercise_01" name="input_exercise_01" style="
+            width: var(--area-width);
+            height: var(--area-height);
+        ">
+        </textarea><br/>
+        <label for="expected_output_exercise_01">Saída Esperada</label><br/>
+        <p id="expected_output_exercise_01" class="expected_answer">Olá mundo!</p>
+        <label for="input_exercise_01">Saída</label><br/>
+        <p id="output_exercise_01" class="wrong_answer">...</p>
+    </form>
+</div>
+</body>
+<script type="text/javascript">
+    document.getElementById("input_exercise_01").addEventListener("input", runAnswer);
+    document.getElementById("input_exercise_01").addEventListener("input", checkAnswer);
+
+    function runAnswer(event) {
+        let caller = event.target;
+        let id = caller.getAttribute("id");
+        let splitted = id.split("_");
+        splitted[0] = "output";
+        let output = splitted.join("_");
+        let answer = eval(caller.value);
+        document.getElementById(output).textContent = answer;
+        // console.log("the id of the caller was " + id + " and the id of the target was " + output);
+        // console.log("the code was " + caller.value + " and the answer was " + answer);
+    }
+
+    function checkAnswer(event) {
+        let caller = event.target;
+        let id = caller.getAttribute("id");
+        let splitted = id.split("_");
+        splitted[0] = "expected_output";
+        let expected_output = splitted.join("_");
+        splitted[0] = "output";
+        let output = splitted.join("_");
+
+        if(document.getElementById(expected_output).textContent === document.getElementById(output).textContent) {
+            document.getElementById(output).className = "correct_answer";
+        } else {
+            document.getElementById(output).className = "wrong_answer";
+        }
+
+        console.log(caller);
+    }
+</script>
+</html>
