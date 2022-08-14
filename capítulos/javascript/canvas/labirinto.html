@@ -25,16 +25,25 @@
 
 <div class="center">
 
-    <h1>Desenhando com Javascript</h1>
+    <h1>Labirinto em Javascript</h1>
 
-    <p>Utilize esta página para desenhar num canvas com Javascript.</p>
+    <p>
+        Utilizando as funções de desenho em canvas, desenhe um labirinto, utilizando o código-fonte de exemplo em
+        Javascript.
+    </p>
+    <p>
+        Seu labirinto não pode ser muito simples. Peça para um colega tentar resolvê-lo e testar sua dificuldade.
+    </p>
+
     <canvas id="canvas_draw" width="640" height="480"></canvas>
 
     <h2>Bibliografia</h2>
 
     <ul>
         <li>
-            <a href="https://developer.mozilla.org/pt-BR/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes">Desenhando formas com canvas</a>
+            <a href="https://developer.mozilla.org/pt-BR/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes">
+                Desenhando formas com canvas
+            </a>
         </li>
     </ul>
 
@@ -56,6 +65,15 @@ c.closePath();
 c.beginPath();
 c.fillStyle = "Black";
 c.arc(100, 100, 50, 0, 2 * Math.PI);  // x, y, raio, ?, ângulo do arco (2 * Math.PI para desenhar um círculo)
+c.fill();
+c.closePath();
+
+// desenha um triângulo vermelho
+c.beginPath();
+c.fillStyle = "Red";
+c.moveTo(75,50);
+c.lineTo(100,75);
+c.lineTo(100,25);
 c.fill();
 c.closePath();
 
