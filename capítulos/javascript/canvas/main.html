@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Desenhando com Javascript</title>
+    <style>
+        canvas {
+            border: solid 1px black;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Desenhando com Javascript</h1>
+
+<p>Utilize esta página para desenhar num canvas com Javascript.</p>
+
+<canvas id="canvas_draw" width="640" height="480"></canvas>
+
+</body>
+<script type="text/javascript">
+let canvas = document.getElementById("canvas_draw");
+let c = canvas.getContext("2d");
+
+// caixa azul
+c.beginPath();
+c.fillStyle = "LightBlue";
+c.rect(100, 100, 100, 100);  // x, y, comprimento, altura
+c.fill();
+c.closePath();
+
+// roda preta
+c.beginPath();
+c.fillStyle = "Black";
+c.arc(100, 100, 50, 0, 2 * Math.PI);  // x, y, raio, ?, ângulo do arco (2 * Math.PI para desenhar um círculo)
+c.fill();
+c.closePath();
+
+</script>
+</html>
