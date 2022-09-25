@@ -72,6 +72,7 @@ Apostila (disponível junto com o repositório)
 * [Vai dar namoro em CSS](atividades/markdown_v2.md)
 * [Reproduzir site do Bing em HTML + CSS](atividades/reproduzir_bing.md)
 * [Exercício do Box model com Cavaleiros do Zodíaco](atividades/box_model.md)
+* [Desenhando um labirinto com Javascript](atividades/javascript/canvas/labirinto.html)
 
 ### Outros recursos
 
