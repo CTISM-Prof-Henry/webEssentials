@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Desenhando com Javascript</title>
+    <title>Pacman</title>
     <style>
         canvas {
             border: solid 1px black;
@@ -25,14 +25,14 @@
 
 <div class="center">
 
-    <h1>Labirinto em Javascript</h1>
+    <h1>Pacman</h1>
 
     <p>
         Utilizando as funções de desenho em canvas, desenhe um labirinto, utilizando o código-fonte de exemplo em
         Javascript.
     </p>
     <p>
-        Seu labirinto não pode ser muito simples. Peça para um colega tentar resolvê-lo e testar sua dificuldade.
+        Faça também com que o Pacman consiga se mover quando o usuário usar as setas do teclado.
     </p>
 
     <canvas id="canvas_draw" width="640" height="480"></canvas>
@@ -51,31 +51,71 @@
 
 </body>
 <script type="text/javascript">
-let canvas = document.getElementById("canvas_draw");
-let c = canvas.getContext("2d");
+function desenha_labirinto() {
+    let canvas = document.getElementById("canvas_draw");
+    let c = canvas.getContext("2d");
 
-// caixa azul
-c.beginPath();
-c.fillStyle = "LightBlue";
-c.rect(100, 100, 100, 100);  // x, y, comprimento, altura
-c.fill();
-c.closePath();
+    // caixa azul
+    c.beginPath();
+    c.fillStyle = "LightBlue";
+    c.rect(100, 100, 100, 100);  // x, y, comprimento, altura
+    c.fill();
+    c.closePath();
 
-// roda preta
-c.beginPath();
-c.fillStyle = "Black";
-c.arc(100, 100, 50, 0, 2 * Math.PI);  // x, y, raio, ?, ângulo do arco (2 * Math.PI para desenhar um círculo)
-c.fill();
-c.closePath();
+    // roda preta
+    c.beginPath();
+    c.fillStyle = "Black";
+    c.arc(100, 100, 50, 0, 2 * Math.PI);  // x, y, raio, ?, ângulo do arco (2 * Math.PI para desenhar um círculo)
+    c.fill();
+    c.closePath();
 
-// desenha um triângulo vermelho
-c.beginPath();
-c.fillStyle = "Red";
-c.moveTo(75,50);
-c.lineTo(100,75);
-c.lineTo(100,25);
-c.fill();
-c.closePath();
+    // desenha um triângulo vermelho
+    c.beginPath();
+    c.fillStyle = "Red";
+    c.moveTo(75,50);
+    c.lineTo(100,75);
+    c.lineTo(100,25);
+    c.fill();
+    c.closePath();
+}
+
+function desenha_personagem() {
+    let canvas = document.getElementById("canvas_draw");
+    let ctx = canvas.getContext("2d");
+
+    ctx.beginPath();
+    ctx.arc(personagem_x, personagem_y, 50, 0.25 * Math.PI, 1.25 * Math.PI, false);
+    ctx.fillStyle = "rgb(255, 255, 0)";
+    ctx.fill();
+    ctx.beginPath();
+    ctx.arc(personagem_x, personagem_y, 50, 0.75 * Math.PI, 1.75 * Math.PI, false);
+    ctx.fill();
+    ctx.beginPath();
+    ctx.arc(personagem_x, personagem_y - 25, 10, 0, 2 * Math.PI, false);
+    ctx.fillStyle = "rgb(255, 255, 255)";
+    ctx.fill();
+    ctx.closePath();
+}
+
+function move_personagem(event) {
+    let key = event['key'];
+
+    if(key === 'ArrowUp') {
+        console.log('move personagem para cima');
+    } else if(key === 'ArrowDown') {
+        console.log('move personagem para baixo');
+    } else if(key === 'ArrowLeft') {
+        console.log('move personagem para esquerda');
+    } else if(key === 'ArrowRight') {
+        console.log('move personagem para direita');
+    }
+}
+let personagem_x = 300;
+let personagem_y = 300;
+
+desenha_labirinto();
+desenha_personagem();
+document.onkeydown = move_personagem;
 
 </script>
 </html>
