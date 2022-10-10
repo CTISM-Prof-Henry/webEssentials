@@ -55,8 +55,8 @@ https://github.com/CTISM-Prof-Henry/wikiPythonTerceirao/blob/main/groups/fun%C3%
 Código:
 
 ```C
-imprime("ola mundo!");  // vai imprimir 'ola mundo!'
-imprime("OLA MUNDO!");  // vai imprimir 'ola mundo!'
+imprime("ola mundo!", false);  // vai imprimir 'ola mundo!'
+imprime("OLA MUNDO!", false);  // vai imprimir 'ola mundo!'
 imprime("ola mundo!", false);  // vai imprimir 'ola mundo!'
 imprime("Ola Mundo!", false);  // vai imprimir 'ola mundo!'
 imprime("ola mundo!", true);  // vai imprimir 'OLA MUNDO!'
