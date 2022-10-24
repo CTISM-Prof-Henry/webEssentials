@@ -63,8 +63,15 @@ Apostila (disponível junto com o repositório)
 ### Javascript
 
 * [Introdução](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/First_steps)
-* [Elementos básicos](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Building_blocks)
-* [Cookies](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Cookies)
+  * [if, else](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Building_blocks/conditionals)
+  * [Laços de repetição](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Building_blocks/Looping_code)
+  * [Funções](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Building_blocks/Functions)
+    * [Construindo uma função](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
+    * [Retorno de valores de uma função](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Building_blocks/Return_values)
+* [Document Object Model](https://developer.mozilla.org/pt-BR/docs/Web/API/Document_Object_Model/Introduction)
+  * [Selecionando elementos HTML usando DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
+  * [Eventos](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Building_blocks/Events)
+* * [Cookies](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Cookies)
 
 ### Atividades
 
@@ -77,6 +84,7 @@ Apostila (disponível junto com o repositório)
     * [Desenhando um labirinto com Javascript](atividades/javascript/canvas/labirinto.html)
     * [Exercícios funções](atividades/javascript/functions/funcoes.md)
     * [Botões](atividades/javascript/functions/botoes.md)
+    * [Document Object Model](atividades/javascript/functions/dom.md)
 
 ### Outros recursos
 

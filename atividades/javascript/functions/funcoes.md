@@ -1,5 +1,8 @@
 # Funções 
 
+Dica: faça esses exercícios no [onlinegdb](https://onlinegdb.com), selecionando a linguagem
+de programação como Javascript.
+
 ## Exercícios 
 
 1. Crie uma função que eleve um número ao quadrado.
