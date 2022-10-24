@@ -85,6 +85,7 @@ Apostila (disponível junto com o repositório)
     * [Exercícios funções](atividades/javascript/functions/funcoes.md)
     * [Botões](atividades/javascript/functions/botoes.md)
     * [Document Object Model](atividades/javascript/functions/dom.md)
+      * [Gabarito](atividades/javascript/functions/gabarito_dom.md)
 
 ### Outros recursos
 

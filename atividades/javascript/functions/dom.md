@@ -3,10 +3,12 @@
 ## Pré-requisitos
 
 1. A página [dragon_ball.html](dragon_ball.html) aberta no seu navegador preferido
+   * A imagem do goku está [neste link](goku.png). Clique em Download e depois clique com o botão direito e
+     `salvar como` para salvá-la na mesma pasta onde você colocou o arquivo `dragon_ball.html`
 2. A aba `console` do navegador aberta (aperte F12 para abrir a janela de desenvolvimento, e então selecione a aba 
    `console`)
 3. Conhecimentos básicos de seletores do 
-   [Document Object Model](https://developer.mozilla.org/pt-BR/docs/Web/API/Document_Object_Model/Introduction), 
+   [Document Object Model](https://developer.mozilla.org/pt-BR/docs/Web/API/Document_Object_Model/Introduction) 
 
 ## Exercícios
 
