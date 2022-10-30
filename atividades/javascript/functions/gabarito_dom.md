@@ -19,7 +19,8 @@ let text = document.getElementById('first_paragraph');
 console.log(text.innerHTML);
 ```
 
-2. Selecione todos os **parágrafos** que possuem a classe `strait`. Itere sobre cada um dos elementos usando um laço de repetição, e imprima na tela o conteúdo do atributo `innerHTML`
+2. Selecione todos os **parágrafos** que possuem a classe `strait`. Itere sobre cada um dos elementos usando um laço de 
+   repetição, e imprima na tela o conteúdo do atributo `innerHTML`
 
 ```javascript
 let elements = document.getElementsByClassName('strait');
@@ -30,7 +31,8 @@ for(let i = 0; i < elements.length; i++) {
 }
 ```
 
-3. Selecione todos os **elementos** que possuem a classe `strait`. Itere sobre cada um dos elementos usando um laço de repetição, e imprima na tela o conteúdo do atributo `innerHTML`
+3. Selecione todos os **elementos** que possuem a classe `strait`. Itere sobre cada um dos elementos usando um laço de 
+   repetição, e imprima na tela o conteúdo do atributo `innerHTML`
 
 ```javascript
 let elements1 = document.getElementsByClassName('strait');
@@ -39,7 +41,8 @@ for(let i = 0; i < elements1.length; i++) {
 }
 ```
 
-4. Selecione todos os elementos que possuem a tag `p`. Itere sobre cada um dos elementos usando um laço de repetição, e imprima na tela o conteúdo do atributo `innerHTML` 
+4. Selecione todos os elementos que possuem a tag `p`. Itere sobre cada um dos elementos usando um laço de repetição, e 
+   imprima na tela o conteúdo do atributo `innerHTML` 
 
 ```javascript
 let elements2 = document.getElementsByTagName('p');

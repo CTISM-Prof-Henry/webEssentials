@@ -2,20 +2,22 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Formulário Datalist</title>
+    <title>datalist</title>
   </head>
   <body>
 
-    <h1>Formulário datalist</h1>
+    <h1>datalist</h1>
 
     <p>O Formulário "Datalist" mostra uma aba de opções pré-definidas do Formulário "Input"</p>
     <p>Usuários quando clicarem na caixa verão uma lista de opções pré-definidas quando foram botar os dados</p>
     <p>A lista atribuida ao "input" deve referir ao "id" atribuido do formulário "datalist"</p>
     <p>Teste abaixo clicando duas vezes na caixa</p>
   
-    </form>
+    <form>
       <label for="Site">Qual seu site favorito?</label>
-      <input list="Site">
+      <label>
+        <input list="Site">
+      </label>
       <datalist id="Site">
       <option value="Twitch">
       <option value="Youtube">
