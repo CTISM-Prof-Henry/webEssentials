@@ -5,7 +5,7 @@ Para todos os exercícios abaixo, crie uma página HTML contendo:
 * Título visível
 * Dois parágrafos, ambos da classe `paragraph`
     * Cada um dos parágrafos deve ter um id próprio
-* Uma imagem
+* Uma imagem, com id definido
 * Quatro botões
 
 ## Exercícios 

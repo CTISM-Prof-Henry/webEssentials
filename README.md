@@ -81,11 +81,12 @@ Apostila (disponível junto com o repositório)
     * [Reproduzir site do Bing em HTML + CSS](atividades/reproduzir_bing.md)
     * [Exercício do Box model com Cavaleiros do Zodíaco](atividades/box_model.md)
 * Javascript
-    * [Desenhando um labirinto com Javascript](atividades/javascript/canvas/labirinto.html)
-    * [Exercícios funções](atividades/javascript/functions/funcoes.md)
-    * [Botões](atividades/javascript/functions/botoes.md)
-    * [Document Object Model](atividades/javascript/functions/dom.md)
-      * [Gabarito](atividades/javascript/functions/gabarito_dom.md)
+  * [Exercícios funções](atividades/javascript/functions/funcoes.md)
+  * [Botões](atividades/javascript/functions/botoes.md)
+  * [Document Object Model](atividades/javascript/functions/dom.md)
+    * [Gabarito](atividades/javascript/functions/gabarito_dom.md)
+  * [Desenhando um labirinto com Javascript](atividades/javascript/canvas/labirinto.html)
+    * [Animando o Pacman](atividades/javascript/canvas/labirinto_v2.html)
 
 ### Outros recursos
 
