@@ -46,7 +46,7 @@ melhor. Como sugestão, comece pela lista abaixo:
 [Qual cantada do Vai Dar Namoro mais combina com você? ](
 https://recordtv.r7.com/hora-do-faro/qual-cantada-do-vai-dar-namoro-mais-combina-com-voce-23052022)
 
-![](../imagens/vai_dar_namoro_2.jpg)
+![](../../imagens/vai_dar_namoro_2.jpg)
 
 ## Efeitos sonoros
 

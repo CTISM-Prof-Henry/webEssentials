@@ -24,7 +24,7 @@ e _itálico_), as imagens, as tabelas, tudo!
 
 [Qual cantada do Vai Dar Namoro mais combina com você? ](https://recordtv.r7.com/hora-do-faro/qual-cantada-do-vai-dar-namoro-mais-combina-com-voce-23052022)
 
-![](../imagens/rodrigo_faro.jpg)
+![](../../imagens/rodrigo_faro.jpg)
 
 ## Efeitos sonoros
 

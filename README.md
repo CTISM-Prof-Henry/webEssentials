@@ -1,6 +1,7 @@
 # webEssentials
 
-Esse repositório visa organizar os conteúdos que serão dados durante o ano de 2022 na disciplina de Projeto e Desenvolvimento de Interfaces para Internet.
+Esse repositório visa organizar os conteúdos que serão dados durante o ano de 2022 na disciplina de Projeto e 
+Desenvolvimento de Interfaces para Internet.
 
 O conteúdo se baseia primariamente sobre o [MDN](https://developer.mozilla.org/pt-BR/) e 
 [W3 Schools](https://www.w3schools.com) mas outros materiais poderão ser usados.
@@ -76,10 +77,10 @@ Apostila (disponível junto com o repositório)
 ### Atividades
 
 * HTML, CSS
-    * [Vai dar namoro em HTML](atividades/reproduzir_markdown.md)
-    * [Vai dar namoro em CSS](atividades/markdown_v2.md)
-    * [Reproduzir site do Bing em HTML + CSS](atividades/reproduzir_bing.md)
-    * [Exercício do Box model com Cavaleiros do Zodíaco](atividades/box_model.md)
+    * [Vai dar namoro em HTML](atividades/html_css/reproduzir_markdown.md)
+    * [Vai dar namoro em CSS](atividades/html_css/markdown_v2.md)
+    * [Reproduzir site do Bing em HTML + CSS](atividades/html_css/reproduzir_bing.md)
+    * [Exercício do Box model com Cavaleiros do Zodíaco](atividades/html_css/box_model.md)
 * Javascript
   * [Exercícios funções](atividades/javascript/functions/funcoes.md)
   * [Botões](atividades/javascript/functions/botoes.md)
@@ -90,7 +91,8 @@ Apostila (disponível junto com o repositório)
 
 ### Outros recursos
 
-Abaixo estão outros recursos que podem lhe auxiliar a aprender desenvolvimento Web. Apesar deste **não ser o conteúdo que será cobrado em provas e trabalhos**, ele pode ajudar e muito no seu aprendizado do conteúdo.
+Abaixo estão outros recursos que podem lhe auxiliar a aprender desenvolvimento Web. Apesar deste **não ser o conteúdo 
+que será cobrado em provas e trabalhos**, ele pode ajudar e muito no seu aprendizado do conteúdo.
 
 * [Hora do Código: Minecraft (em inglês)](https://code.org/minecraft)
 * [Fundação Bradesco](https://www.ev.org.br/areas-de-interesse/tecnologia)

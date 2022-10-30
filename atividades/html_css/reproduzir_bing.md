@@ -14,4 +14,4 @@ Não deixe nenhum detalhe escapar:
 
 As características gráficas que devem ser copiadas estão na imagem abaixo:
 
-<img src="../imagens/site_bing.png" width=50>
+<img src="../../imagens/site_bing.png" width=50>

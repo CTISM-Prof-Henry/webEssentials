@@ -2,25 +2,24 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Nícolas E Guilherme</title>
+    <title>Input Select</title>
 </head>
 <body>
-    <h1>SELECT</h1>
+    <h1>Input Select</h1>
     <h2>Criar um Código com o formulário select</h2>
     <p>O select serve para selecionar algo</p>
     <form>
-        <select  required >
-            
-            <option value="">Nicolas</option>
-            <option selected=""> Selecione </option>
-            <option value="">1</option>
-            <option value="">2</option>
-            <option value="">3</option>
-            <option value="">4</option>
+        <label for="my_select">Selecione o valor:</label>
+        <select id="my_select" required>
+            <option value="father_stretch_my_hands_pt_1">Father Stretch My Hands pt. 1</option>
+            <option value="all_of_the_lights">All of the Lights</option>
+            <option value="bound_2">Bound 2</option>
+            <option value="hold_my_liquor">Hold my Liquor</option>
+            <option value="through_the_wire">Through the Wire</option>
+            <option value="jail">Jail</option>
         </select>
 
-
-        <button type="submit">Enviar</button>
+        <button type="submit" id="enviar">Enviar</button>
     </form>
 
 </body>
