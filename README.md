@@ -84,7 +84,7 @@ Apostila (disponível junto com o repositório)
 * Javascript
   * [Exercícios funções](atividades/javascript/functions/funcoes.md)
   * [Botões](atividades/javascript/functions/botoes.md)
-    * [Gabarito](atividades/javascript/functions/gabarito_botoes.md)
+    * [Gabarito](atividades/javascript/functions/gabarito_botoes.html)
   * [Document Object Model](atividades/javascript/functions/dom.md)
     * [Gabarito](atividades/javascript/functions/gabarito_dom.md)
   * [Desenhando um labirinto com Javascript](atividades/javascript/canvas/labirinto.html)
