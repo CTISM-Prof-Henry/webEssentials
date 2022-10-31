@@ -14,6 +14,7 @@ O conteúdo se baseia primariamente sobre o [MDN](https://developer.mozilla.org/
 * [HTML](#html)
 * [CSS](#css)
 * [Javascript](#javascript)
+* [Execícios](#exercícios)
 * [Outros recursos](#outros-recursos)
 
 ### Fundamentos Web
@@ -72,9 +73,9 @@ Apostila (disponível junto com o repositório)
 * [Document Object Model](https://developer.mozilla.org/pt-BR/docs/Web/API/Document_Object_Model/Introduction)
   * [Selecionando elementos HTML usando DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
   * [Eventos](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Building_blocks/Events)
-* * [Cookies](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Cookies)
+  * [Cookies](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Cookies)
 
-### Atividades
+### Exercícios
 
 * HTML, CSS
     * [Vai dar namoro em HTML](atividades/html_css/reproduzir_markdown.md)
