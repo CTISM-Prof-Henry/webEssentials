@@ -1,3 +1,4 @@
+
 /* se aplica a todos os elementos que não foram especificados abaixo */
 .center {
     margin: auto;
@@ -22,13 +23,14 @@ img.center {
 }
 
 body {
-    background-color: #FFFFFF;
+    background-color: rgb(133, 97, 254);
     margin-top: 0;
     margin-bottom: 0;
+    font-family:Arial;
 }
 
 .white-background {
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     height: 100vh;
     padding-left: 30px;
     padding-right: 30px;
