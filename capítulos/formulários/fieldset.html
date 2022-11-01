@@ -3,12 +3,14 @@
 <head>
 	<meta charset="UTF-8">
 	<title>fieldset</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
+    <div class="center">
 	<h1>fieldset</h1>
 	<p>A função do elemento fieldset no HTML é agrupar elementos dentro de um formulário Web.</p>
 	<h3>Exemplo:</h3>
-
+    
     <form>
         <fieldset>
             <legend>Personalidade:</legend>
@@ -16,9 +18,19 @@
             <input type="text" id="fname" name="fname" value="John"><br>
             <label for="lname">Sobrenome:</label><br>
             <input type="text" id="lname" name="lname" value="Doe"><br><br>
-            <input type="submit" value="Enviar">
+            <button id="muda tema" onclick="mudatema()">trocar o tema</button>
+
         </fieldset>
     </form>
 
+    
+<script type="text/javascript">
+    function mudatema(){
+        let color = document.body.style.backgroundColor;
+        if(color === 'rgb(255, 255, 255)') {
+            color = 'rgb(83, 207, 161)'
+    } else {
+            color = 'rgb(133, 97, 254)';
+        }
 </body>
 </html>
