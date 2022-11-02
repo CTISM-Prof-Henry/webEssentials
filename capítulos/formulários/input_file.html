@@ -3,23 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <title>input file</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
 </head>
-<body>
-	<h1>input file</h1>
+<div class="white-background">
+<body class="center">
+<h1>input file</h1>
 
-	<p>Um formulário HTML é usado para coletar entrada do usuário, sendo esta frequentemente enviada à um servidor para
-		processamento.
-	</p>
-	<p>Veja o tipo "Input File"</p>
-	<p>
-		O arquivo de tipo de entrada define um campo de seleção de arquivo e um botão "Procurar" para uploads de arquivos.
-	</p>
-	<p>Veja no exemplo a seguir:</p>
-	<form>
-		<label for="myfile">Selecione o arquivo:</label>
-		<input type="file" id="myfile" name="myfile"><br/>
-		<input type="submit" value="submit">
-	</form>
+<p>Um formulário HTML é usado para coletar entrada do usuário, sendo esta frequentemente enviada à um servidor para
+processamento.
+</p>
+<p>Veja o tipo "Input File"</p>
+<p>
+O arquivo de tipo de entrada define um campo de seleção de arquivo e um botão "Procurar" para uploads de arquivos.
+</p>
+<p>Veja no exemplo a seguir:</p>
+<form>
+<label for="myfile">Selecione o arquivo:</label>
+<input type="file" id="myfile" name="myfile"><br/>
+<input type="submit" value="submit" onclick="janela()">
 
+</form>
+</div>
 </body>
+
+<script type="text/javascript">
+function janela(){
+window.alert('funciona desgraça')
+}
+window.onclick = myFunction;
+function myFunction() {
+  document.getElementsByTagName("BODY")[0].style.backgroundColor = "yellow";
+}
+</script>
+
 </html>
