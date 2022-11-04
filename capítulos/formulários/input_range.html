@@ -3,22 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <title>input range</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <style type="text/css">
+        #texto{
+            border: solid 3px black;
+            background-color: black;
+        }
+    </style>
 </head>
+<div class="center white-background">
 <body>
 <h1>input range</h1>
 <h2>Para que serve o input range? 🤔</h2>
 <p>Ele define um valor dentro de um intervalo que geralmente não é importante, pois é mais utilizado para fazer
     controles deslizantes.</p>
 <p>O valor padrão do intervalo vai de 0 a 100.</p>
-<p>Veja um exemplo a seguir: </p>
+<p>Veja um exemplo a seguir: (Mexa para revelar um texto bem colorido) </p>
 <form>
-  <label for="vol">Controle (entre 0 e 5):</label>
-  <input type="range" id="vol" name="vol" min="0" max="5">
+  <label for="vol">Controle (entre 1 e 6):</label>
+  <input type="range" id="cor" name="vol" min="1" max="6" value="1" onchange="troca_cor()">
 </form>
+<p id="texto">Esse texto BONITO troca de cor ao mexer na barrinha aqui de cima :3</p>
 <p>Existem duas tags que se colocam dentro do input para definir o intervalo dos números no controle: </p>
 <ul>
 	<li><b>min=" "</b> - Para o menor número</li>
 	<li><b>max=" "</b> - Para o maior número</li>
 </ul>
+</div>
 </body>
+<script type="text/javascript">
+    function troca_cor(){
+    let valor = document.getElementById("cor").value;
+    if(valor === '1'){
+        document.getElementById("texto").style.color = "red";
+    }
+    if(valor === '2'){
+        document.getElementById("texto").style.color = "orange";
+    }
+    if(valor === '3'){
+        document.getElementById("texto").style.color = "yellow";
+    }
+    
+    if(valor === '4'){
+        document.getElementById("texto").style.color = "green";
+    }
+    if(valor === '5'){
+        document.getElementById("texto").style.color = "blue";
+    }
+     if(valor === '6'){
+        document.getElementById("texto").style.color = "purple";
+    }
+
+
+
+
+
+    }
+</script>
 </html>
