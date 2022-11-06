@@ -90,6 +90,9 @@ Apostila (disponível junto com o repositório)
     * [Gabarito](atividades/javascript/functions/gabarito_dom.md)
   * [Desenhando um labirinto com Javascript](atividades/javascript/canvas/labirinto.html)
     * [Animando o Pacman](atividades/javascript/canvas/labirinto_v2.html)
+  * [Event Listener](atividades/javascript/functions/event_listener.md)
+    * [Gabarito](atividades/javascript/functions/gabarito_event_listener.html)
+  * [Strings](atividades/javascript/functions/strings.md)
 
 ### Outros recursos
 
