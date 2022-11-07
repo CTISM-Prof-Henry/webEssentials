@@ -64,16 +64,27 @@ Apostila (disponível junto com o repositório)
 
 ### Javascript
 
-* [Introdução](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/First_steps)
-  * [if, else](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Building_blocks/conditionals)
-  * [Laços de repetição](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Building_blocks/Looping_code)
-  * [Funções](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Building_blocks/Functions)
-    * [Construindo uma função](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
-    * [Retorno de valores de uma função](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Building_blocks/Return_values)
+#### Javascript puro
+
+* [O que é Javascript?](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
+* [Pensando em Javascript](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/First_steps/A_first_splash)
+* [O que deu errado? Solução de problemas](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/First_steps/What_went_wrong)
+* [Variáveis](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/First_steps/Variables)
+* [Números e operadores](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/First_steps/Math)
+* [Condicionais: if, else](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Building_blocks/conditionals)
+* [Laços de repetição](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Building_blocks/Looping_code)
+* **Strings**
+  * [Básico](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/First_steps/Strings)
+  * [Métodos úteis](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/First_steps/Useful_string_methods)
+* [Arrays](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/First_steps/Arrays)
+* [Funções](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Building_blocks/Functions)
+  * [Construindo uma função](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
+  * [Retorno de valores de uma função](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Building_blocks/Return_values)
+* [Objetos](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Objects/Basics)
+* [Eventos](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Building_blocks/Events)
 * [Document Object Model](https://developer.mozilla.org/pt-BR/docs/Web/API/Document_Object_Model/Introduction)
   * [Selecionando elementos HTML usando DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
-  * [Eventos](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Building_blocks/Events)
-  * [Cookies](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Cookies)
+* [Cookies](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Cookies)
 
 ### Exercícios
 
