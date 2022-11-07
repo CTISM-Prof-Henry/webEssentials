@@ -11,7 +11,7 @@ Basta você modificar o código-fonte dentro das tags `<script>`.
 
    Entrada:
    
-   ``´javascript
+   ```javascript
    exercise_01('oi');
    exercise_01([1, 2, 3]);
    ```
