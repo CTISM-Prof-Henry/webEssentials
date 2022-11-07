@@ -103,7 +103,9 @@ Apostila (disponível junto com o repositório)
     * [Animando o Pacman](atividades/javascript/canvas/labirinto_v2.html)
   * [Event Listener](atividades/javascript/functions/event_listener.md)
     * [Gabarito](atividades/javascript/functions/gabarito_event_listener.html)
+  * [Arrays](atividades/javascript/functions/arrays.md)
   * [Strings](atividades/javascript/functions/strings.md)
+  
 
 ### Outros recursos
 
