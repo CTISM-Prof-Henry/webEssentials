@@ -1,11 +1,301 @@
 <!DOCTYPE html>
 <html>
 <head>
+
     <meta charset="UTF-8">
     <title>input button</title>
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
-<h1>input button</h1>
+
+    <style>
+
+* {
+    padding: 0;
+    margin: 0 auto;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(80, 135, 255, 0.937);
+    border-radius: 20px;
+    width: 85vh;
+    height: 100vh;
+    margin-top: 0;
+
+}
+
+.div1 h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+
+}
+
+.div1 button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 20px;
+    cursor: pointer;
+    color: red;
+    font-size: 18px;
+    margin-top: 10px;
+    border-radius: 20px;
+    border: none;
+    
+}
+
+.div1 span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    font-size: 19px;
+    color: red;
+    
+}
+
+.div2 h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+
+}
+
+.div2 button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 20px;
+    cursor: pointer;
+    color: red;
+    font-size: 18px;
+    margin-top: 10px;
+    border-radius: 20px;
+    border: none;
+    
+}
+
+.div2 span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    font-size: 19px;
+    color: red;
+    
+} 
+
+#trocacor {
+    width: 90px;
+    height: 30px;
+    color: red;
+    cursor: pointer;
+    border-radius: 20px;
+    border: none;
+    font-size: 18px;
+}
+
+
+* {
+    padding: 0;
+    margin: 0 auto;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(80, 135, 255, 0.937);
+    border-radius: 20px;
+    width: 80vh;
+    height: 60vh;
+    margin-top: 9%;
+
+}
+
+.div1 h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+
+}
+
+.div1 button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 20px;
+    cursor: pointer;
+    color: red;
+    font-size: 18px;
+    margin-top: 10px;
+    border-radius: 20px;
+    border: none;
+    
+}
+
+.div1 span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    font-size: 19px;
+    color: red;
+    
+}
+
+.div2 h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+
+}
+
+.div2 button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 20px;
+    cursor: pointer;
+    color: red;
+    font-size: 18px;
+    margin-top: 10px;
+    border-radius: 20px;
+    border: none;
+    
+}
+
+.div2 span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    font-size: 19px;
+    color: red;
+    
+}
+
+.dark-mode {
+    background-color: black; 
+    color: #fff;
+    
+}
+
+
+#troca-fundo {
+    width: 80px;
+    height: 25px;
+    border-radius: 50px;
+    background-color: #fff;
+    color: red;
+    font-size: 19px;
+    border: none;
+}
+
+
+
+
+    </style>
+
+    <nav>
+        <div class="div1">
+        <h1>contador</h1>
+
+        <button id="button1" onclick="bnt()">Click me</button>
+
+        <span id="contador">0</span>
+        </div>
+
+        <div class="div2">
+                <h1>Cronometro</h1>
+
+                <button onclick="start()">Click me</button>
+
+                <button onclick="stopp()">Stop</button>
+
+                <button onclick="reset()">Reset</button>
+
+                <span id="span1">00</span>
+
+        </div>
+        <button id="trocacor" onclick="teste()">TrocaF</button>
+    </nav>
+
+
+
+
+
+    <script>
+
+
+let num = document.getElementById("contador").value;
+let cont = 0;
+
+      function bnt() {
+            cont ++;
+            num = document.getElementById("contador").innerHTML = cont;
+            if(cont === 15) {
+                  alert("Já deu né");
+                  cont = 0;
+                  num = document.getElementById("contador").innerHTML = cont;
+            }
+      }
+
+      let min = 0;
+      let sec = 0;
+      
+      function start(){
+            cron = setInterval(relogio,100);
+      }
+      
+      function stopp() {
+            clearInterval(cron);
+      }
+
+      function reset() {
+            min = 0;
+            sec = 0;
+            stopp(cron);
+            document.getElementById("span1").innerHTML = min + ':' + sec;
+      }
+      
+      function relogio() {
+            sec++;
+            if(sec === 60) {
+                  min++;
+                  sec = 0;
+            }
+            document.getElementById("span1").innerHTML = min + ':' + sec;
+      
+      }
+
+      document.body.style.background = 'purple';
+
+      let trocafundo = true;
+
+      function teste(){
+            if(trocafundo) {
+                document.body.style.background = '#FFFFFF';
+                trocafundo = false;
+            } else {
+                document.body.style.background = 'purple';
+                trocafundo = true;
+            }
+      }
+
+    </script>
 
 </body>
 </html>
