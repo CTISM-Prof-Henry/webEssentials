@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cookies</title>
+</head>
+<body>
+
+<h1>Cookies</h1>
+
+<p>Esta página faz uso de cookies. Insira seu nome abaixo e clique no botão enviar. Depois, feche a página no navegador,
+e abra-a novamente!</p>
+
+<form id="my_form" onsubmit="return false">
+    <label for="input_name">Digite seu nome:</label>
+    <input type="text" id="input_name" size="30">
+    <button id="button_send" onclick="save_cookie()">Salvar</button>
+</form>
+
+<button id="button_recover" onclick="recover_cookies()">Recuperar cookies</button>
+
+</body>
+<script type="application/javascript">
+    function recover_cookies() {
+        let cvalue = getCookie('username');
+        window.alert('o cookie username possui valor ' + cvalue);
+    }
+
+    function save_cookie() {
+        setCookie('username', document.getElementById("input_name").value, 5);
+        window.alert('cookie salvo!');
+    }
+
+    /**
+     * Adapted from w3schools: https://www.w3schools.com/js/js_cookies.asp
+     * @param cname Name of cookie
+     * @param cvalue Cookie value
+     * @param exdays Expiry date (in days)
+     */
+    function setCookie(cname, cvalue, exdays) {
+        const d = new Date();
+        d.setTime(d.getTime() + (exdays*24*60*60*1000));
+        let expires = "expires="+ d.toUTCString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    }
+
+    /**
+     * Aaapted from w3schools: https://www.w3schools.com/js/js_cookies.asp
+     * @param cname Name of cookie
+     * @returns {string} Value of cookie
+     */
+    function getCookie(cname) {
+        let name = cname + "=";
+        let decodedCookie = decodeURIComponent(document.cookie);
+        let ca = decodedCookie.split(';');
+        for(let i = 0; i <ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) === ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) === 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+
+</script>
+</html>

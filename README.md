@@ -85,7 +85,7 @@ Apostila (disponível junto com o repositório)
   * [Adicionando eventos](https://developer.mozilla.org/pt-BR/docs/Web/API/EventTarget/addEventListener)
 * [Document Object Model](https://developer.mozilla.org/pt-BR/docs/Web/API/Document_Object_Model/Introduction)
   * [Selecionando elementos HTML usando DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
-* [Cookies](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Cookies)
+* [Cookies](https://www.w3schools.com/js/js_cookies.asp) (em inglês)
 
 ### Exercícios
 
