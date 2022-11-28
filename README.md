@@ -106,6 +106,7 @@ Apostila (disponível junto com o repositório)
     * [Gabarito](atividades/javascript/functions/gabarito_event_listener.html)
   * [Arrays](atividades/javascript/functions/arrays.md)
   * [Strings](atividades/javascript/functions/strings.md)
+  * [Cookies](atividades/javascript/cookies/cookies_pt_1.md)
   
 
 ### Outros recursos
