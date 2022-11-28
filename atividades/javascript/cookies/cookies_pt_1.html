@@ -3,52 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Cookies</title>
+    <title>🍪 Cookies</title>
+    <style>
+        * {
+            font-family: Verdana, sans-serif;
+        }
+
+        /* se aplica a todos os elementos que não foram especificados abaixo */
+        .center {
+            margin: auto;
+            width: 50%;
+        }
+
+        /* se aplica apenas a títulos h1 com a classe centro */
+        h1.center {
+            text-align: center;
+        }
+
+        /* se aplica apenas a parágrafos com a classe centro */
+        p.center {
+            text-align: center;
+        }
+
+        /* se aplica apenas a imagens com a classe centro */
+        img.center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        body {
+            background-color: rgb(133, 97, 254);
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        .white-background {
+            background-color: white;
+            height: 100vh;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        input {
+            margin: 5px;
+        }
+    </style>
 </head>
 <body>
 
-<h1>Cookies</h1>
+<div class="center white-background">
+    <h1>Cookies</h1>
 
-<p>Esta página faz uso de cookies. Insira seu nome abaixo e clique no botão enviar. Depois, feche a página no navegador,
-e abra-a novamente!</p>
+    <p>Esta página faz uso de cookies. Insira seu nome abaixo e clique no botão enviar. Depois, feche a página no navegador,
+    e abra-a novamente!</p>
 
-<form id="my_form" onsubmit="return false">
-    <label for="input_name">Digite seu nome:</label>
-    <input type="text" id="input_name" size="30">
-    <button id="button_send" onclick="save_cookie()">Salvar</button>
-</form>
-
-<button id="button_recover" onclick="recover_cookies()">Recuperar cookies</button>
+    <form id="my_form" onsubmit="return false">
+        <label for="input_cookiename">Nome do cookie:</label>
+        <input type="text" id="input_cookiename" size="30">
+        <br/>
+        <label for="input_cookievalue">Valor do cookie:</label>
+        <input type="text" id="input_cookievalue" size="30">
+        <br/>
+        <button id="button_send" onclick="salvarCookie()">Salvar</button>
+        <button id="button_recover_all" onclick="recuperaTodosCookies()">Recuperar todos</button>
+        <button id="button_recover_one" onclick="recuperaUmCookie()">Recuperar um</button>
+    </form>
+</div>
 
 </body>
 <script type="application/javascript">
-    function recover_cookies() {
-        let cvalue = getCookie('username');
-        window.alert('o cookie username possui valor ' + cvalue);
+    function recuperaTodosCookies() {
+        let cookies = document.cookie;
+        window.alert("os cookies definidos para esta página são:\n" + cookies);
     }
 
-    function save_cookie() {
-        setCookie('username', document.getElementById("input_name").value, 5);
-        window.alert('cookie salvo!');
+    function recuperaUmCookie() {
+        let cookiename = document.getElementById("input_cookiename").value;
+        let cookievalue = getCookie(cookiename);
+        window.alert("O valor do cookie " + cookiename + " é " + cookievalue);
+    }
+
+    function salvarCookie() {
+        let cookiename = document.getElementById("input_cookiename").value;
+        let cookievalue = document.getElementById("input_cookievalue").value;
+        let expireDays = 5;
+
+        setCookie(cookiename, cookievalue, expireDays);
+        window.alert('cookie salvo! 🍪');
+    }
+
+    function formataDataVencimento(dias) {
+        const d = new Date();
+        d.setTime(d.getTime() + (dias * 24 * 60 * 60 * 1000));
+        return "expires=" + d.toUTCString();
     }
 
     /**
-     * Adapted from w3schools: https://www.w3schools.com/js/js_cookies.asp
-     * @param cname Name of cookie
-     * @param cvalue Cookie value
-     * @param exdays Expiry date (in days)
+     * Codigo adaptado do w3schools: https://www.w3schools.com/js/js_cookies.asp
+     * @param cname Nome do cookie
+     * @param cvalue Valor do cookie
+     * @param exdays Data de expiração (em dias)
      */
     function setCookie(cname, cvalue, exdays) {
-        const d = new Date();
-        d.setTime(d.getTime() + (exdays*24*60*60*1000));
-        let expires = "expires="+ d.toUTCString();
+        let expires = formataDataVencimento(exdays);
         document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
     }
 
     /**
-     * Aaapted from w3schools: https://www.w3schools.com/js/js_cookies.asp
-     * @param cname Name of cookie
-     * @returns {string} Value of cookie
+     * Codigo adaptado do w3schools: https://www.w3schools.com/js/js_cookies.asp
+     * @param cname Nome do cookie
+     * @returns {string} Valor do cookie
      */
     function getCookie(cname) {
         let name = cname + "=";
