@@ -107,6 +107,7 @@ Apostila (disponível junto com o repositório)
   * [Arrays](atividades/javascript/functions/arrays.md)
   * [Strings](atividades/javascript/functions/strings.md)
   * [Cookies](atividades/javascript/cookies/cookies_pt_1.md)
+    * [Gabarito](atividades/javascript/cookies/cookies_pt_1.html)
   
 
 ### Outros recursos
