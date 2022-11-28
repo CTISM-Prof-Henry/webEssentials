@@ -23,7 +23,7 @@ quando o usuário clicar no botão:
 </form>
 ```
 
-O gabarito desta atividade está [aqui](gabarito_event_listener.html).
+O gabarito desta atividade está [aqui](event_listener.html).
 
 ## Referências
 

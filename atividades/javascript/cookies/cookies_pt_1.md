@@ -10,6 +10,9 @@ Nesta atividade, você deve criar uma página HTML que contenha:
   * Três botões (tag `button`), com ids definidos;
 * CSS interno (opcional)
 
+Não se esqueça de colocar `onsubmit="return false"` dentro da tag `form`! (Senão a página HTML irá sempre ser atualizada
+quando você clicar em um dos botões, e será impossível fazer o exercício)
+
 Você terá que definir também três funções em Javascript:
 
 * Uma que salva um cookie;
