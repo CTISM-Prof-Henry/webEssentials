@@ -64,8 +64,6 @@ Apostila (disponível junto com o repositório)
 
 ### Javascript
 
-#### Javascript puro
-
 * [O que é Javascript?](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
 * [Pensando em Javascript](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/First_steps/A_first_splash)
 * [O que deu errado? Solução de problemas](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/First_steps/What_went_wrong)
