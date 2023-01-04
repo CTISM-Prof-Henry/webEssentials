@@ -116,3 +116,4 @@ que será cobrado em provas e trabalhos**, ele pode ajudar e muito no seu aprend
 * [Hora do Código: Minecraft (em inglês)](https://code.org/minecraft)
 * [Fundação Bradesco](https://www.ev.org.br/areas-de-interesse/tecnologia)
 * [Grasshopper](https://grasshopper.app/pt_br/)
+* [Ferramenta para construção de layouts em HTML](https://www.layoutit.com/build)
