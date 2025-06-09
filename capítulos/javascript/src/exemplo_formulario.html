@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Exemplo formulário e Javascript</title>
+    <style>
+        * {
+            font-family: Verdana, sans-serif;
+        }
+    </style>
+</head>
+<body>
+<h1>Exemplo formulário e Javascript</h1>
+
+<p>Esse código-fonte exemplifica o uso de formulários e código Javascript em uma página HTML.</p>
+
+<form>
+    <label for="input_nome">Nome:</label>
+    <input type="text" id="input_nome" name="nome">
+    <button id="button_submit">Enviar</button>
+</form>
+
+<p id="p_nome">
+</p>
+
+</body>
+<script>
+    function sayHello(event) {
+        event.preventDefault();
+        console.log('cliquei');
+        let nome = document.getElementById('input_nome').value;
+        document.getElementById('p_nome').innerHTML = 'Olá ' + nome + '!';
+    }
+
+    document.getElementById('button_submit').addEventListener('click', sayHello);
+
+</script>
+</html>
