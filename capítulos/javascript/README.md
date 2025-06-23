@@ -97,23 +97,57 @@ https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects
 
 ### Strings
 
-> [!NOTE]
-> Em breve!
+1. Crie uma variável chamada `frase` com um texto qualquer. Mostre a frase toda em letras maiúsculas.
+2. Crie uma variável `texto` com uma frase. Mostre no console quantos caracteres ela possui.
+3. Crie uma variável `palavra` com uma palavra de sua escolha. Inverta a palavra e exiba o resultado no console.
+4. Crie uma variável `mensagem` com a seguinte frase: `"Estou aprendendo JavaScript e JavaScript é incrível!"`. 
+   Substitua todas as ocorrências de `JavaScript` por `JS`.
+5. Crie uma variável `nomeCompleto` com seu nome completo. Mostre apenas o primeiro nome no console.
+6. Crie uma variável `email` com algum endereço de e-mail. Verifique se o e-mail contém o caractere `@` e exiba 
+   `true` ou `false`.
+7. Crie uma variável `frase` com um texto e conte quantas vezes a letra `a` aparece nela. Mostre o resultado no console.
+8. Crie uma variável `CPF` com um CPF qualquer. Mostre o CPF com os últimos 3 caracteres substituídos por `*`.
+9. Crie uma variável `frase` com uma frase qualquer. Mostre as palavras dessa frase em ordem alfabética.
+10. Crie uma variável `frase` com o valor `"minha frase bonita"`. Converta essa frase para o formato `camelCase` e 
+   mostre no console: `minhaFraseBonita`.
 
 ### Funções
 
 1. Crie uma função que, dado um número `n` por parâmetro, retorna a n-ésima letra do alfabeto.
    * Se `n = 1`, então `letra = 'a'`
    * Se `n = 26`, então `letra = 'z'`
+2. Defina uma função `soma`, que deve somar `+1` para um valor passado por parâmetro. Depois, aplique esta função
+   usando o método `map` dos arrays para um array de 3 números
+   * Exemplo: 
+     ```javascript
+     let a = [1, 2, 3]; 
+     a.map(soma)  // deve exibir [2, 3, 4] na tela
+     ```
+3. Escreva uma função que, dado dois números `a` e `b`, arranje-os em uma função polinomial de primeiro grau 
+   (função afim) `y = ax + b`, e retorne os 10 valores de `y` para os seguintes 10 valores de `x`: `0, 1, 2, 3, 4, 5, 6, 7, 8, 9`
+   * Exemplo: `a = 1` e `b = -2`
+   * Saída da função: `-2, -1, 0, 1, 2, 3, 4, 5, 6, 7` 
+
+### Orientação a objetos
+
+> [!NOTE]
+> Em breve!
 
 ### Eventos
 
 1. Construa uma página Web com um formulário. Coloque um campo de entrada de texto e um botão. O usuário deve entrar 
    seu nome na caixa de texto. Ao clicar no botão, o site deve dizer `Olá fulano!`, onde `fulano` é o nome inserido no 
    campo de texto.
-2. Crie um formulário que possua os seguintes campos: `nome`, `telefone` e `mensagem`. Depois, crie uma função em 
-   Javascript para enviar uma mensagem pelo WhatsApp para o número `telefone`, dando olá para a pessoal `nome` e com a 
-   mensagem `mensagem`. 
+2. Crie uma página com um botão que muda a cor de fundo da página para uma cor aleatória toda vez que for clicado. Use 
+   JavaScript para gerar a cor e aplicar ao `body`.
+3. Construa uma página com três botões: `Aumentar`, `Diminuir` e `Resetar`. Ao clicar em `Aumentar`, o número mostrado
+   na tela deve incrementar em 1. `Diminuir` deve decrementar e `Resetar` deve voltar o número para `0`.
+4. Crie uma página com uma lista de tarefas (`ul`) e um campo de texto com botão `Adicionar`. Ao digitar uma tarefa e
+   clicar no botão, a tarefa deve aparecer na lista. 
+   * Dica: use `createElement` e `appendChild` para adicionar itens dinamicamente.
+5. Crie um formulário que possua os seguintes campos: `nome`, `telefone` e `mensagem`. Depois, crie uma função em
+   Javascript para enviar uma mensagem pelo WhatsApp para o número `telefone`, dando olá para a pessoal `nome` e com a
+   mensagem `mensagem`.
 
 ## Bibliografia
 
