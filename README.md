@@ -1,12 +1,22 @@
 # webEssentials
 
-Esse repositório visa organizar os conteúdos que serão dados durante o ano de 2022 na disciplina de Projeto e 
-Desenvolvimento de Interfaces para Internet.
+Esse repositório contém conteúdo relativo a construção de páginas Web com HTML, CSS e Javascript.
 
-O conteúdo se baseia primariamente sobre o [MDN](https://developer.mozilla.org/pt-BR/) e 
-[W3 Schools](https://www.w3schools.com) mas outros materiais poderão ser usados.
+O conteúdo se baseia primariamente sobre o [MDN](https://developer.mozilla.org/pt-BR/) e [W3 Schools](https://www.w3schools.com), mas outros materiais 
+poderão ser usados.
 
-## Sumário
+## Conteúdo original
+
+A seção de conteúdo original possui material elaborado pelo professor Henry Cagnini para essa disciplina. Ele não deve
+ser abordado como a totalidade do conhecimento sobre o assunto, mas sim como assuntos pontuais para os quais uma maior
+atenção deve ser dada durante o aprendizado.
+
+O conteúdo original pode ser encontrado no diretório [Capítulos](capítulos/README.md).
+
+## Conteúdo externo
+
+Essa seção organiza o conhecimento que será visto na disciplina, a partir de fontes externas. Novamente, não deve ser
+considerado a totalidade do material sobre o assunto, mas sim como um fio condutor do que será visto.
 
 * [Fundamentos Web](#fundamentos-web)
 * [Design de sites](#design-de-sites)
@@ -93,7 +103,7 @@ Apostila (disponível junto com o repositório)
     * [Reproduzir site do Bing em HTML + CSS](atividades/html_css/reproduzir_bing.md)
     * [Exercício do Box model com Cavaleiros do Zodíaco](atividades/html_css/box_model.md)
 * Javascript
-  * [Exercícios funções](atividades/javascript/functions/funcoes.md)
+  * [Exercícios sobre funções](atividades/javascript/functions/funcoes.md)
   * [Botões](atividades/javascript/functions/botoes.md)
     * [Gabarito](atividades/javascript/functions/botoes.html)
   * [Document Object Model](atividades/javascript/functions/dom.md)
@@ -106,9 +116,8 @@ Apostila (disponível junto com o repositório)
   * [Strings](atividades/javascript/functions/strings.md)
   * [Cookies](atividades/javascript/cookies/cookies_pt_1.md)
     * [Gabarito](atividades/javascript/cookies/cookies_pt_1.html)
-  
 
-### Outros recursos
+## Outros recursos
 
 Abaixo estão outros recursos que podem lhe auxiliar a aprender desenvolvimento Web. Apesar deste **não ser o conteúdo 
 que será cobrado em provas e trabalhos**, ele pode ajudar e muito no seu aprendizado do conteúdo.
