@@ -13,6 +13,63 @@ relação cliente-servidor).
 6. Funções
 7. Orientação a objetos
 8. Eventos
+9. DOM
+
+## Eventos
+
+Eventos em Javascript são disparados por um objeto que recebe uma interação, e invocam uma função ou método que deve
+reagir àquela interação.
+
+Existem diversos tipos de eventos, sendo os mais comuns:
+
+| Tipo de Evento     | Descrição                                                                                         |
+|--------------------|---------------------------------------------------------------------------------------------------|
+| `click`            | Disparado quando um elemento é clicado.                                                           |
+| `keyup`            | Disparado quando uma tecla é liberada.                                                            |
+| `keydown`          | Disparado quando uma tecla é pressionada.                                                         |
+| `mouseover`        | Disparado quando o ponteiro do mouse entra no elemento.                                           |
+| `mouseout`         | Disparado quando o ponteiro do mouse sai do elemento.                                             |
+| `submit`           | Disparado quando um formulário é enviado.                                                         |
+| `change`           | Disparado quando o valor de um `<input>`, `<select>` ou `<textarea>` é alterado.                  |
+| `input`            | Disparado a cada modificação no campo de entrada.                                                 |
+| `load`             | Disparado quando um recurso (ex: imagem, script) e seus dependentes são completamente carregados. |
+| `DOMContentLoaded` | Disparado quando o documento HTML foi completamente carregado e analisado.                        |
+
+Você pode conferir uma lista de eventos no W3 Schools (em inglês): https://www.w3schools.com/js/js_events.asp. Além 
+disso, o material possui um exemplo de evento [nesta página](src/exemplo_formulario.html) (necessário baixar o código).
+
+## DOM
+
+o DOM (Document Object Model) pode ser utilizado tanto pelo navegador (apertando a tecla F12) quanto por uma página
+HTML.
+
+* **document:** o documento HTML atual.
+* **element:** qualquer elemento da Web. Pode ser um parágrafo, uma div, a página HTML inteira, a seção body, um item
+  de uma lista, etc.
+
+## Métodos
+
+Considere a seguinte [página HTML](../../atividades/javascript/functions/dragon_ball.html) para referência.
+
+### Seleção de elementos
+
+* `document.getElementById`: seleciona **um elemento** que possua um id definido:
+
+  ```javascript
+  let element = document.getElementById('first_paragraph');
+  ```
+
+* `document.getElementsByClassName`: seleciona **vários elementos** que possuem a classe definida:
+
+  ```javascript
+  let elements = document.getElementsByClassName('strait');
+  ```
+
+* `document.getElementByTagName`: seleciona **vários elementos** que são da tag definida:
+
+  ```javascript
+  let elements = document.getElementByTagName('p');
+  ```
 
 ## Exercícios
 
