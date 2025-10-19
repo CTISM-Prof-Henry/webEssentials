@@ -36,7 +36,7 @@ Existem diversos tipos de eventos, sendo os mais comuns:
 | `DOMContentLoaded` | Disparado quando o documento HTML foi completamente carregado e analisado.                        |
 
 Você pode conferir uma lista de eventos no W3 Schools (em inglês): https://www.w3schools.com/js/js_events.asp. Além 
-disso, o material possui um exemplo de evento [nesta página](src/exemplo_formulario.html) (necessário baixar o código).
+disso, o material possui um exemplo de evento [nesta página](src/formulario/index.html) (necessário baixar o código).
 
 ## DOM
 
