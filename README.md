@@ -5,6 +5,80 @@ Esse repositório contém conteúdo relativo a construção de páginas Web com 
 O conteúdo se baseia primariamente sobre o [MDN](https://developer.mozilla.org/pt-BR/) e [W3 Schools](https://www.w3schools.com), mas outros materiais 
 poderão ser usados.
 
+## Roadmap
+
+O roadmap apresenta uma visão geral dos conceitos que serão aprendidos neste curso.
+
+```mermaid
+flowchart TD
+    A["Diferença entre<br>Web e Internet"]
+    B["Introdução ao Protocolo<br>HTTP e linguagem HTML"]
+    
+    A --> B
+    B --> HTML
+
+    subgraph HTML[HTML]
+        direction TB
+        C1["head e body"]
+        C2["tags do header"]
+        C3["tags do body"]
+        C4["containers<br>(div, header, main)"]
+
+        C1 --> C2
+        C2 --> C3
+        C3 --> C4
+        
+    end
+
+    subgraph CV["Controle de Versão"]
+        direction TB
+        D1["Introdução<br>ao git"]
+        D2["Introdução<br>ao GitHub"]
+        D3["Github Pages"]
+
+        D1 --> D2
+        D2 --> D3
+    end
+
+    B --> CV
+
+    subgraph CSS["CSS"]
+        direction TB
+        E1["Introdução<br>ao CSS"]
+        E2["customização de tag,<br>classe, id e pseudoclasse"]
+        E3["importação de CSS<br>inline, interna e externa"]
+        E4["box model"]
+        E5["Flexbox"]
+        
+        E1 --> E2
+        E2 --> E3
+        E3 --> E4
+        E4 --> E5
+    end
+
+    HTML --> CSS
+
+    subgraph JS["Javascript"]
+        direction TB
+        F1["Introdução ao Javascript"]
+        F2["importação de Javascript<br>interno e externo"]
+        F3["sintaxe"]
+        F4["funções"]
+        F5["formulários em HTML com Javascript"]
+        F6["Document Object Model"]
+        F7["cookies e localStorage"]
+
+        F1 --> F2
+        F2 --> F3
+        F3 --> F4
+        F4 --> F5
+        F5 --> F6
+        F6 --> F7
+    end
+
+    CSS --> JS
+```
+
 ## Conteúdo original
 
 A seção de conteúdo original possui material elaborado pelo professor Henry Cagnini para essa disciplina. Ele não deve
