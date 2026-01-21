@@ -22,7 +22,7 @@ flowchart TD
         C1["head e body"]
         C2["tags do header"]
         C3["tags do body"]
-        C4["containers<br>(div, header, main)"]
+        C4["SEO, acessibilidade e containers<br>(div, header, main)"]
 
         C1 --> C2
         C2 --> C3
@@ -47,13 +47,15 @@ flowchart TD
         E1["Introdução<br>ao CSS"]
         E2["customização de tag,<br>classe, id e pseudoclasse"]
         E3["importação de CSS<br>inline, interna e externa"]
-        E4["box model"]
-        E5["Flexbox"]
+        E4["precedência"]
+        E5["box model"]
+        E6["flexbox e layout responsivo"]
         
         E1 --> E2
         E2 --> E3
         E3 --> E4
         E4 --> E5
+        E5 --> E6
     end
 
     HTML --> CSS
@@ -63,7 +65,7 @@ flowchart TD
         F1["Introdução ao Javascript"]
         F2["importação de Javascript<br>interno e externo"]
         F3["sintaxe"]
-        F4["funções"]
+        F4["funções e eventos"]
         F5["formulários em HTML com Javascript"]
         F6["Document Object Model"]
         F7["cookies e localStorage"]
