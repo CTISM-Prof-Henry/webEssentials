@@ -1,3 +1,6 @@
 .idea/
 .vs/
 instance/
+node_modules/
+package-lock.json
+package.json

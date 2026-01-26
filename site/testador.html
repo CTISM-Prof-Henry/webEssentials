@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Testador de Páginas HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 2rem;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li.ok {
+            color: green;
+        }
+        li.fail {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Testador de Estrutura HTML</h1>
+
+<p>Faça upload de um arquivo HTML para verificar se os elementos básicos estão presentes.</p>
+
+<input type="file" id="fileInput" accept=".html,.htm">
+
+<h2>Resultado da Análise</h2>
+<ul id="result"></ul>
+
+<script>
+document.getElementById('fileInput').addEventListener('change', function (event) {
+    const file = event.target.files[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+
+    reader.onload = function (e) {
+        const content = e.target.result;
+
+        // Cria um DOM isolado a partir do HTML carregado
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(content, 'text/html');
+
+        const elementsToCheck = ['html', 'head', 'body', 'h1', 'p'];
+        const resultList = document.getElementById('result');
+        resultList.innerHTML = '';
+
+        elementsToCheck.forEach(tag => {
+            const exists = doc.getElementsByTagName(tag).length > 0;
+            const li = document.createElement('li');
+            li.textContent = `<${tag}> ${exists ? 'encontrado' : 'não encontrado'}`;
+            li.className = exists ? 'ok' : 'fail';
+            resultList.appendChild(li);
+        });
+    };
+
+    reader.readAsText(file);
+});
+</script>
+
+</body>
+</html>
