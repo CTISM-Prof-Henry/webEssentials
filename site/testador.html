@@ -2,65 +2,52 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Testador de Páginas HTML</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 2rem;
-        }
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-        li.ok {
-            color: green;
-        }
-        li.fail {
-            color: red;
-        }
-    </style>
+    <title>Testador</title>
+    <link rel="stylesheet" href="css/testador.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
 
-<h1>Testador de Estrutura HTML</h1>
 
-<p>Faça upload de um arquivo HTML para verificar se os elementos básicos estão presentes.</p>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <header>
 
-<input type="file" id="fileInput" accept=".html,.htm">
+                <h1>Testador</h1>
 
-<h2>Resultado da Análise</h2>
-<ul id="result"></ul>
+                <p>Este site é um testador de páginas HTML. Ele será utilizado no decorrer da disciplina para verificar
+                    a implementação
+                    dos recursos vistos em aula.</p>
 
-<script>
-document.getElementById('fileInput').addEventListener('change', function (event) {
-    const file = event.target.files[0];
-    if (!file) return;
+                <p>Faça upload de um arquivo HTML para verificar se os elementos básicos estão presentes.</p>
 
-    const reader = new FileReader();
-
-    reader.onload = function (e) {
-        const content = e.target.result;
-
-        // Cria um DOM isolado a partir do HTML carregado
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(content, 'text/html');
-
-        const elementsToCheck = ['html', 'head', 'body', 'h1', 'p'];
-        const resultList = document.getElementById('result');
-        resultList.innerHTML = '';
-
-        elementsToCheck.forEach(tag => {
-            const exists = doc.getElementsByTagName(tag).length > 0;
-            const li = document.createElement('li');
-            li.textContent = `<${tag}> ${exists ? 'encontrado' : 'não encontrado'}`;
-            li.className = exists ? 'ok' : 'fail';
-            resultList.appendChild(li);
-        });
-    };
-
-    reader.readAsText(file);
-});
-</script>
+                <div class="mb-3">
+                    <label for="fileInput" class="form-label">Faça upload do arquivo aqui</label>
+                    <input class="form-control" type="file" id="fileInput" accept=".html,.htm">
+                </div>
+            </header>
+            <main id="div-main">
+                <p class="d-inline-flex gap-1">
+                    <a class="btn btn-primary" data-bs-toggle="collapse" href="#class1CollapseDiv" role="button"
+                       aria-expanded="false" aria-controls="collapseExample">
+                        Aula 1
+                    </a>
+                </p>
+                <div class="collapse" id="class1CollapseDiv">
+                    <div class="card card-body" id="class1CollapseCard">
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</div>
 
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+<script type="application/javascript" src="js/testador.js"></script>
+
 </html>

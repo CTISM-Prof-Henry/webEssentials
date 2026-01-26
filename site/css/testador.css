@@ -1,0 +1,17 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 2rem;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li.ok {
+    color: green;
+}
+
+li.fail {
+    color: red;
+}
