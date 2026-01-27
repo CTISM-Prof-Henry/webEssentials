@@ -1,52 +1,62 @@
-// todo criar checkboxes!
-function createClass1Checks() {
-    let div_card = document.getElementById('class1CollapseCard');
+class ClassOne {
+    constructor() {
+        this.createChecks();
+        document.getElementById('fileInput').addEventListener('change', this.tester);
+    }
 
-    const elementsToCheck = ['doctype', 'html', 'head', 'body', 'h1', 'p'];
+    createChecks() {
+        let div_card = document.getElementById('class1CollapseCard');
 
-    elementsToCheck.forEach(element => {
-       let template = document.createElement('div');
-        template.setAttribute('class', 'form-check');
-        template.setAttribute('id', 'check_' + element);
-        let input = document.createElement('input');
-        input.setAttribute('type', 'checkbox');
-        input.setAttribute('class', 'form-check-input');
-        input.setAttribute('id', 'aula1' + element);
-        input.setAttribute('value', '');
+        const elementsToCheck = ['doctype', 'html', 'head', 'body', 'h1', 'p'];
 
-        template.appendChild(input);
-        let label = document.createElement('label');
-        label.setAttribute('for', 'aula1' + element);
-        label.setAttribute('class', 'form-check-label');
-        label.innerHTML = element;
-        template.appendChild(label);
+        elementsToCheck.forEach(element => {
+            let template = document.createElement('div');
+            template.setAttribute('class', 'form-check');
+            template.setAttribute('id', 'check_' + element);
+            let input = document.createElement('input');
+            input.setAttribute('type', 'checkbox');
+            input.setAttribute('class', 'form-check-input');
+            input.setAttribute('id', 'aula1' + element);
+            input.setAttribute('value', '');
+            input.addEventListener("click", e => e.preventDefault());
+            input.addEventListener("keydown", e => e.preventDefault());
 
-        div_card.appendChild(template);
-    });
-}
+            template.appendChild(input);
+            let label = document.createElement('label');
+            label.setAttribute('for', 'aula1' + element);
+            label.setAttribute('class', 'form-check-label');
+            label.innerHTML = element;
+            template.appendChild(label);
 
-function testerClass1(event) {
-    const file = event.target.files[0];
-    if (!file) return;
-
-    const reader = new FileReader();
-
-    reader.onload = function (e) {
-        const content = e.target.result;
-
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(content, 'text/html');
-
-        document.getElementById('aula1doctype').checked = doc.doctype;
-
-        const elementsToCheck = ['html', 'head', 'body', 'h1', 'p'];
-        elementsToCheck.forEach(tag => {
-            document.getElementById('aula1' + tag).checked = doc.getElementsByTagName(tag).length > 0;
+            div_card.appendChild(template);
         });
-    };
+    }
 
-    reader.readAsText(file);
+    tester(event) {
+        const file = event.target.files[0];
+        if (!file) return;
+
+        const reader = new FileReader();
+
+        reader.onload = function (e) {
+            const content = e.target.result;
+
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(content, 'text/html');
+
+            document.getElementById('aula1doctype').checked = doc.doctype;
+
+            const elementsToCheck = ['html', 'head', 'body', 'h1', 'p'];
+            elementsToCheck.forEach(tag => {
+                document.getElementById('aula1' + tag).checked = doc.getElementsByTagName(tag).length > 0;
+            });
+        };
+        reader.readAsText(file);
+    }
 }
 
-createClass1Checks();
-document.getElementById('fileInput').addEventListener('change', testerClass1);
+function main() {
+    let c1 = new ClassOne();
+}
+
+main();

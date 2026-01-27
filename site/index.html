@@ -9,7 +9,6 @@
 </head>
 <body>
 
-
 <div class="container">
     <div class="row">
         <div class="col">
@@ -24,19 +23,34 @@
                 <p>Faça upload de um arquivo HTML para verificar se os elementos básicos estão presentes.</p>
 
                 <div class="mb-3">
-                    <label for="fileInput" class="form-label">Faça upload do arquivo aqui</label>
-                    <input class="form-control" type="file" id="fileInput" accept=".html,.htm">
+
+
                 </div>
             </header>
             <main id="div-main">
-                <p class="d-inline-flex gap-1">
-                    <a class="btn btn-primary" data-bs-toggle="collapse" href="#class1CollapseDiv" role="button"
+                <div class="d-grid gap-3">
+                    <p>
+                        <a class="btn btn-primary" data-bs-toggle="collapse" href="#class1CollapseDiv" role="button"
+                           aria-expanded="false" aria-controls="collapseExample">
+                            Aula 1
+                        </a>
+                        <label for="fileInput" class="form-label">Faça upload do arquivo aqui</label>
+                        <input class="form-control" type="file" id="fileInput" accept=".html,.htm">
+                    </p>
+                    <div class="collapse" id="class1CollapseDiv">
+                        <div class="card card-body" id="class1CollapseCard">
+                        </div>
+                    </div>
+
+                    <p>
+                    <a class="btn btn-primary" data-bs-toggle="collapse" href="#class2CollapseDiv" role="button"
                        aria-expanded="false" aria-controls="collapseExample">
-                        Aula 1
+                        Aula 2
                     </a>
-                </p>
-                <div class="collapse" id="class1CollapseDiv">
-                    <div class="card card-body" id="class1CollapseCard">
+                    </p>
+                    <div class="collapse" id="class2CollapseDiv">
+                        <div class="card card-body" id="class2CollapseCard">
+                        </div>
                     </div>
                 </div>
             </main>
