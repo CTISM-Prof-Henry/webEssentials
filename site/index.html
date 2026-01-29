@@ -17,10 +17,9 @@
                 <h1>Testador</h1>
 
                 <p>Este site é um testador de páginas HTML. Ele será utilizado no decorrer da disciplina para verificar
-                    a implementação
-                    dos recursos vistos em aula.</p>
+                    a implementação dos recursos vistos em aula.</p>
 
-                <p>Faça upload de um arquivo HTML para verificar se os elementos básicos estão presentes.</p>
+                <p>Faça upload dos arquivos do seu site (.html, .css, .js) para fazer as verificações.</p>
 
                 <div class="mb-3">
 
@@ -32,7 +31,7 @@
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-body">
-                                Você precisa submeter um diretório ou uma URL para serem verificados!
+                                Você precisa submeter um diretório para ser verificado!
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Fechar</button>
@@ -46,11 +45,7 @@
                     <div class="input-group mb-3">
                         <div class="input-group mb-3">
                             <label class="input-group-text" for="fileInput">Arquivo</label>
-                            <input class="form-control" type="file" id="fileInput" accept=".html,.htm,.css,.js">
-                        </div>
-                        <div class="input-group mb-3">
-                            <label class="input-group-text" for="urlInput">URL</label>
-                            <input class="form-control" type="text" id="urlInput">
+                            <input class="form-control" type="file" id="fileInput" multiple webkitdirectory accept=".html,.htm,.css,.js">
                         </div>
                         <div class="input-group mb-3">
                             <button class="btn btn-primary" id="buttonRunChecks">Verificar</button>

@@ -53,26 +53,22 @@ class ClassOne {
     }
 
     tester(event) {
-        const file = document.getElementById('fileInput').files[0];
-        if (!file) {
-            const url = document.getElementById('urlInput').value;
-            if(!url) {
-                const modalElement = document.getElementById('modalError');
-                const modal = new bootstrap.Modal(modalElement);
-                modal.show();
-            } else {
-                fetch(url)
-                    .then(res => res.text())
-                    .then(html => {
-                        this.performChecks(html);
-                    });
-            }
+        const files = document.getElementById('fileInput').files;
+        if (!files) {
+            const modalElement = document.getElementById('modalError');
+            const modal = new bootstrap.Modal(modalElement);
+            modal.show();
         } else {
-            const reader = new FileReader();
-            reader.onload = (e) => {
-                this.performChecks(e.target.result);
-            };
-            reader.readAsText(file);
+            for(let i = 0; i < files.length; i++) {
+                if(files[i].name.includes('htm')) {
+                    const reader = new FileReader();
+                    reader.onload = (e) => {
+                        this.performChecks(e.target.result);
+                    };
+                    reader.readAsText(files[i]);
+                    break;
+                }
+            }
         }
     }
 }
