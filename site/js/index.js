@@ -1,7 +1,7 @@
 class ClassOne {
     constructor() {
         this.createChecks();
-        document.getElementById('fileInput').addEventListener('change', this.tester);
+        document.getElementById('buttonRunChecks').addEventListener('click', this.tester.bind(this));
     }
 
     createChecks() {
@@ -32,26 +32,48 @@ class ClassOne {
         });
     }
 
+    performChecks(content) {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(content, 'text/html');
+
+        document.getElementById('aula1doctype').checked = doc.doctype;
+
+        const elementsToCheck = ['html', 'head', 'body', 'h1', 'p'];
+        let countChecked = 0;
+        elementsToCheck.forEach(tag => {
+            const fulfilled = doc.getElementsByTagName(tag).length > 0;
+            document.getElementById('aula1' + tag).checked = fulfilled;
+            countChecked += fulfilled;
+        });
+
+        if(countChecked === elementsToCheck.length) {
+            document.getElementById('btnClass1').setAttribute('class', 'btn btn-success');
+        }
+
+    }
+
     tester(event) {
-        const file = event.target.files[0];
-        if (!file) return;
-
-        const reader = new FileReader();
-
-        reader.onload = function (e) {
-            const content = e.target.result;
-
-            const parser = new DOMParser();
-            const doc = parser.parseFromString(content, 'text/html');
-
-            document.getElementById('aula1doctype').checked = doc.doctype;
-
-            const elementsToCheck = ['html', 'head', 'body', 'h1', 'p'];
-            elementsToCheck.forEach(tag => {
-                document.getElementById('aula1' + tag).checked = doc.getElementsByTagName(tag).length > 0;
-            });
-        };
-        reader.readAsText(file);
+        const file = document.getElementById('fileInput').files[0];
+        if (!file) {
+            const url = document.getElementById('urlInput').value;
+            if(!url) {
+                const modalElement = document.getElementById('modalError');
+                const modal = new bootstrap.Modal(modalElement);
+                modal.show();
+            } else {
+                fetch(url)
+                    .then(res => res.text())
+                    .then(html => {
+                        this.performChecks(html);
+                    });
+            }
+        } else {
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                this.performChecks(e.target.result);
+            };
+            reader.readAsText(file);
+        }
     }
 }
 

@@ -28,14 +28,40 @@
                 </div>
             </header>
             <main id="div-main">
+                <div class="modal fade" id="modalError" tabindex="-1" aria-labelledby="modalErrorLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                Você precisa submeter um diretório ou uma URL para serem verificados!
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Fechar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
                 <div class="d-grid gap-3">
+                    <div class="input-group mb-3">
+                        <div class="input-group mb-3">
+                            <label class="input-group-text" for="fileInput">Arquivo</label>
+                            <input class="form-control" type="file" id="fileInput" accept=".html,.htm,.css,.js">
+                        </div>
+                        <div class="input-group mb-3">
+                            <label class="input-group-text" for="urlInput">URL</label>
+                            <input class="form-control" type="text" id="urlInput">
+                        </div>
+                        <div class="input-group mb-3">
+                            <button class="btn btn-primary" id="buttonRunChecks">Verificar</button>
+                        </div>
+                    </div>
+
                     <p>
-                        <a class="btn btn-primary" data-bs-toggle="collapse" href="#class1CollapseDiv" role="button"
+                        <a class="btn btn-primary" id="btnClass1" data-bs-toggle="collapse" href="#class1CollapseDiv" role="button"
                            aria-expanded="false" aria-controls="collapseExample">
                             Aula 1
                         </a>
-                        <label for="fileInput" class="form-label">Faça upload do arquivo aqui</label>
-                        <input class="form-control" type="file" id="fileInput" accept=".html,.htm">
                     </p>
                     <div class="collapse" id="class1CollapseDiv">
                         <div class="card card-body" id="class1CollapseCard">
@@ -43,7 +69,7 @@
                     </div>
 
                     <p>
-                    <a class="btn btn-primary" data-bs-toggle="collapse" href="#class2CollapseDiv" role="button"
+                    <a class="btn btn-primary" id="btnClass2" data-bs-toggle="collapse" href="#class2CollapseDiv" role="button"
                        aria-expanded="false" aria-controls="collapseExample">
                         Aula 2
                     </a>
