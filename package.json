@@ -1,0 +1,24 @@
+{
+  "devDependencies": {
+    "@marp-team/marp-cli": "^4.2.3",
+    "jsdom": "^27.4.0",
+    "nyc": "^17.1.0",
+    "qunit": "^2.25.0"
+  },
+  "scripts": {
+    "test": "nyc qunit \"site/js/test/**/*.js\""
+  },
+  "nyc": {
+    "reporter": [
+      "text",
+      "html"
+    ],
+    "include": [
+      "site/js/src/**/*.js"
+    ],
+    "exclude": [
+      "site/js/test/**/*.js"
+    ],
+    "all": true
+  }
+}
