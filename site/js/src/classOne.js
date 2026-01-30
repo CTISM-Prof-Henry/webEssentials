@@ -1,15 +1,30 @@
-class ClassOne {
+import {HTMLTester, Tester} from "./utils.js";
+
+export class ClassOneTester extends Tester {
     constructor() {
-        this.createChecks();
-        document.getElementById('buttonRunChecks').addEventListener('click', this.tester.bind(this));
+        super();
+        this.elementsToCheck = ['doctype', 'html', 'head', 'body', 'h1', 'p'];
     }
 
-    createChecks() {
+    test(content) {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(content, 'text/html');
+
+        let checks = [doc.doctype !== null];
+
+        for(let i = 1; i < this.elementsToCheck.length; i++) {
+            const fulfilled = doc.getElementsByTagName(this.elementsToCheck[i]).length > 0;
+            checks.push(fulfilled);
+        }
+        return checks;
+    }
+}
+
+export class ClassOneHTMLTester extends HTMLTester {
+    createHTMLContent() {
         let div_card = document.getElementById('class1CollapseCard');
 
-        const elementsToCheck = ['doctype', 'html', 'head', 'body', 'h1', 'p'];
-
-        elementsToCheck.forEach(element => {
+        this.tester.elementsToCheck.forEach(element => {
             let template = document.createElement('div');
             template.setAttribute('class', 'form-check');
             template.setAttribute('id', 'check_' + element);
@@ -32,27 +47,7 @@ class ClassOne {
         });
     }
 
-    performChecks(content) {
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(content, 'text/html');
-
-        document.getElementById('aula1doctype').checked = doc.doctype;
-
-        const elementsToCheck = ['html', 'head', 'body', 'h1', 'p'];
-        let countChecked = 0;
-        elementsToCheck.forEach(tag => {
-            const fulfilled = doc.getElementsByTagName(tag).length > 0;
-            document.getElementById('aula1' + tag).checked = fulfilled;
-            countChecked += fulfilled;
-        });
-
-        if(countChecked === elementsToCheck.length) {
-            document.getElementById('btnClass1').setAttribute('class', 'btn btn-success');
-        }
-
-    }
-
-    tester(event) {
+    testCallback(event) {
         const files = document.getElementById('fileInput').files;
         if (!files) {
             const modalElement = document.getElementById('modalError');
@@ -63,7 +58,17 @@ class ClassOne {
                 if(files[i].name.includes('htm')) {
                     const reader = new FileReader();
                     reader.onload = (e) => {
-                        this.performChecks(e.target.result);
+                        const checks = this.tester.test(e.target.result);
+                        let countChecked = checks[0];
+                        document.getElementById('aula1doctype').checked = checks[0];
+
+                        for(let i = 1; i < checks.length; i++) {
+                            countChecked += checks[i];
+                            document.getElementById('aula1' + this.tester.elementsToCheck[i]).checked = checks[i];
+                        }
+                        if(countChecked === this.tester.elementsToCheck.length) {
+                            document.getElementById('btnClass1').setAttribute('class', 'btn btn-success');
+                        }
                     };
                     reader.readAsText(files[i]);
                     break;
@@ -72,9 +77,3 @@ class ClassOne {
         }
     }
 }
-
-function main() {
-    let c1 = new ClassOne();
-}
-
-main();
