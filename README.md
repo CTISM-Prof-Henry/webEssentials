@@ -107,7 +107,7 @@ considerado a totalidade do material sobre o assunto, mas sim como um fio condut
 
 Apostila (disponível junto com o repositório)
 
-* <a href="fundamentos_desenvolvimento_web (pronatec).pdf#page=15">Como tudo começou (pp. 15-20)</a>
+* <a href="downloads/fundamentos_desenvolvimento_web (pronatec).pdf#page=15">Como tudo começou (pp. 15-20)</a>
 
 ### Design de sites
 
