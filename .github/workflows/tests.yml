@@ -1,0 +1,34 @@
+name: Executa testes com QUnit
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clona o repositório
+        uses: actions/checkout@v5
+
+      - name: Configura o Node.js (versão LTS)
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Instala dependências do projeto
+        run: npm ci
+
+      - name: Executa os testes com cobertura
+        run: npm test  # usa o script "test" do package.json
+
+      - name: Faz upload do relatório HTML de cobertura como artefato
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-report
+          path: coverage/

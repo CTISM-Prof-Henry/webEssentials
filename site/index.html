@@ -9,7 +9,6 @@
 </head>
 <body>
 
-
 <div class="container">
     <div class="row">
         <div class="col">
@@ -18,25 +17,61 @@
                 <h1>Testador</h1>
 
                 <p>Este site é um testador de páginas HTML. Ele será utilizado no decorrer da disciplina para verificar
-                    a implementação
-                    dos recursos vistos em aula.</p>
+                    a implementação dos recursos vistos em aula.</p>
 
-                <p>Faça upload de um arquivo HTML para verificar se os elementos básicos estão presentes.</p>
+                <p>Faça upload dos arquivos do seu site (.html, .css, .js) para fazer as verificações.</p>
 
                 <div class="mb-3">
-                    <label for="fileInput" class="form-label">Faça upload do arquivo aqui</label>
-                    <input class="form-control" type="file" id="fileInput" accept=".html,.htm">
+
+
                 </div>
             </header>
             <main id="div-main">
-                <p class="d-inline-flex gap-1">
-                    <a class="btn btn-primary" data-bs-toggle="collapse" href="#class1CollapseDiv" role="button"
+                <div class="modal fade" id="modalError" tabindex="-1" aria-labelledby="modalErrorLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                Você precisa submeter um diretório para ser verificado!
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Fechar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="d-grid gap-3">
+                    <div class="input-group mb-3">
+                        <div class="input-group mb-3">
+                            <label class="input-group-text" for="fileInput">Arquivo</label>
+                            <input class="form-control" type="file" id="fileInput" multiple webkitdirectory accept=".html,.htm,.css,.js">
+                        </div>
+                        <div class="input-group mb-3">
+                            <button class="btn btn-primary" id="buttonRunChecks">Verificar</button>
+                        </div>
+                    </div>
+
+                    <p>
+                        <a class="btn btn-primary" id="btnClass1" data-bs-toggle="collapse" href="#class1CollapseDiv" role="button"
+                           aria-expanded="false" aria-controls="collapseExample">
+                            Aula 1
+                        </a>
+                    </p>
+                    <div class="collapse" id="class1CollapseDiv">
+                        <div class="card card-body" id="class1CollapseCard">
+                        </div>
+                    </div>
+
+                    <p>
+                    <a class="btn btn-primary" id="btnClass2" data-bs-toggle="collapse" href="#class2CollapseDiv" role="button"
                        aria-expanded="false" aria-controls="collapseExample">
-                        Aula 1
+                        Aula 2
                     </a>
-                </p>
-                <div class="collapse" id="class1CollapseDiv">
-                    <div class="card card-body" id="class1CollapseCard">
+                    </p>
+                    <div class="collapse" id="class2CollapseDiv">
+                        <div class="card card-body" id="class2CollapseCard">
+                        </div>
                     </div>
                 </div>
             </main>
@@ -48,6 +83,9 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
-<script type="application/javascript" src="js/index.js"></script>
+<script type="module">
+    import { ClassOneTester, ClassOneHTMLTester } from './js/src/classOne.js';
 
+    new ClassOneHTMLTester('buttonRunChecks', 'click', ClassOneTester);
+</script>
 </html>
