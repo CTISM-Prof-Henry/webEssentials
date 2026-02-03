@@ -41,7 +41,7 @@
                 </div>
 
 
-                <div class="d-grid gap-3">
+                <div id="mainGridDiv" class="d-grid gap-3">
                     <div class="input-group mb-3">
                         <div class="input-group mb-3">
                             <label class="input-group-text" for="fileInput">Arquivo</label>
@@ -52,27 +52,27 @@
                         </div>
                     </div>
 
-                    <p>
-                        <a class="btn btn-primary" id="btnAula1" data-bs-toggle="collapse" href="#Aula1CollapseDiv" role="button"
-                           aria-expanded="false" aria-controls="collapseExample">
-                            Aula 1
-                        </a>
-                    </p>
-                    <div class="collapse" id="Aula1CollapseDiv">
-                        <div class="card card-body" id="Aula1CollapseCard">
-                        </div>
-                    </div>
+<!--                    <p>-->
+<!--                        <a class="btn btn-primary" id="btnAula1" data-bs-toggle="collapse" href="#Aula1CollapseDiv" role="button"-->
+<!--                           aria-expanded="false" aria-controls="collapseExample">-->
+<!--                            Aula 1-->
+<!--                        </a>-->
+<!--                    </p>-->
+<!--                    <div class="collapse" id="Aula1CollapseDiv">-->
+<!--                        <div class="card card-body" id="Aula1CollapseCard">-->
+<!--                        </div>-->
+<!--                    </div>-->
 
-                    <p>
-                    <a class="btn btn-primary" id="btnAula2" data-bs-toggle="collapse" href="#Aula2CollapseDiv" role="button"
-                       aria-expanded="false" aria-controls="collapseExample">
-                        Aula 2
-                    </a>
-                    </p>
-                    <div class="collapse" id="Aula2CollapseDiv">
-                        <div class="card card-body" id="Aula2CollapseCard">
-                        </div>
-                    </div>
+<!--                    <p>-->
+<!--                        <a class="btn btn-primary" id="btnAula2" data-bs-toggle="collapse" href="#Aula2CollapseDiv" role="button"-->
+<!--                           aria-expanded="false" aria-controls="collapseExample">-->
+<!--                            Aula 2-->
+<!--                        </a>-->
+<!--                    </p>-->
+<!--                    <div class="collapse" id="Aula2CollapseDiv">-->
+<!--                        <div class="card card-body" id="Aula2CollapseCard">-->
+<!--                        </div>-->
+<!--                    </div>-->
                 </div>
             </main>
         </div>
@@ -84,10 +84,9 @@
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
 <script type="module">
-    import { ClassOneTester, ClassOneHTMLTester } from './js/src/classOne.js';
-    // import { ClassTwoTester, ClassTwoHTMLTester } from './js/src/classTwo.js';
+    import { ClassOneTester } from './js/src/classOne.js';
+    import { ClassTester } from "./js/src/utils/testers";
 
-    new ClassOneHTMLTester('buttonRunChecks', 'click', ClassOneTester, 'Aula1');
-    // new ClassTwoHTMLTester('buttonRunChecks', 'click', ClassTwoTester, 'Aula2');
+    new ClassTester('buttonRunChecks', 'click', ClassOneTester, 'Aula1', document.getElementById('mainGridDiv'));
 </script>
 </html>
