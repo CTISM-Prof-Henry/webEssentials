@@ -1,9 +1,15 @@
-export class Tester {
+class Tester {
     constructor(className) {
         this.classID = className;
         this.elementsToCheck = [];
     }
 
+    test(content) {
+        throw new Error("Este método deve ser implementado em uma subclasse!");
+    }
+}
+
+export class HTMLTagTester extends Tester {
     /**
      * Testa se uma página HTML (fornecida como uma string) atende os critérios dessa classe de teste.
      * @param content Conteúdo da página HTML, como uma string.

@@ -2,21 +2,20 @@
  * Classe que encapsula um elemento a ser verificado.
  */
 class Checker {
+    /**
+     * Constrói este checker.
+     * @param name Nome do elemento sendo verificado (e.g. uma tag html, HTML, doctype, p, a, img, etc)
+     * @param className o número da aula (e.g. 1, 2, 3).
+     */
     constructor(name, className) {
         this.name = name;
         this.classID = className;
     }
 
-    build() {
-        throw new Error("Este método deve ser implementado em uma subclasse!");
-    }
-
-    test() {
-        throw new Error("Este método deve ser implementado em uma subclasse!");
-    }
-}
-
-export class HTMLTagChecker extends Checker {
+    /**
+     * Constrói um checkbox para um elemento que será verificado pelo testador.
+     * @param parentElement O elemento pai onde o checkbox será adicionado.
+     */
     build(parentElement) {
         let template = document.createElement('div');
         template.setAttribute('class', 'form-check');
@@ -40,11 +39,27 @@ export class HTMLTagChecker extends Checker {
         parentElement.appendChild(template);
     }
 
+    /**
+     * Verifica se um item está presente no documento.
+     * @param doc O documento HTML a ser verificado.
+     */
+    test(doc) {
+        throw new Error("Este método deve ser implementado em uma subclasse!");
+    }
+}
+
+/**
+ * Classe que encapsula a verificação de uma tag HTML no documento.
+ */
+export class HTMLTagChecker extends Checker {
     test(doc) {
         return doc.getElementsByTagName(this.name).length > 0
     }
 }
 
+/**
+ * Classe que encapsula a verificação da tag <!DOCTYPE> no documento.
+ */
 export class DoctypeChecker extends HTMLTagChecker {
     constructor(className) {
         super('doctype', className);
@@ -52,5 +67,11 @@ export class DoctypeChecker extends HTMLTagChecker {
 
     test(doc) {
         return doc.doctype !== null;
+    }
+}
+
+export class CSSChecker extends Checker {
+    test(doc) {
+
     }
 }
