@@ -53,24 +53,24 @@
                     </div>
 
                     <p>
-                        <a class="btn btn-primary" id="btnClass1" data-bs-toggle="collapse" href="#class1CollapseDiv" role="button"
+                        <a class="btn btn-primary" id="btnAula1" data-bs-toggle="collapse" href="#Aula1CollapseDiv" role="button"
                            aria-expanded="false" aria-controls="collapseExample">
                             Aula 1
                         </a>
                     </p>
-                    <div class="collapse" id="class1CollapseDiv">
-                        <div class="card card-body" id="class1CollapseCard">
+                    <div class="collapse" id="Aula1CollapseDiv">
+                        <div class="card card-body" id="Aula1CollapseCard">
                         </div>
                     </div>
 
                     <p>
-                    <a class="btn btn-primary" id="btnClass2" data-bs-toggle="collapse" href="#class2CollapseDiv" role="button"
+                    <a class="btn btn-primary" id="btnAula2" data-bs-toggle="collapse" href="#Aula2CollapseDiv" role="button"
                        aria-expanded="false" aria-controls="collapseExample">
                         Aula 2
                     </a>
                     </p>
-                    <div class="collapse" id="class2CollapseDiv">
-                        <div class="card card-body" id="class2CollapseCard">
+                    <div class="collapse" id="Aula2CollapseDiv">
+                        <div class="card card-body" id="Aula2CollapseCard">
                         </div>
                     </div>
                 </div>
@@ -85,7 +85,9 @@
         crossorigin="anonymous"></script>
 <script type="module">
     import { ClassOneTester, ClassOneHTMLTester } from './js/src/classOne.js';
+    // import { ClassTwoTester, ClassTwoHTMLTester } from './js/src/classTwo.js';
 
-    new ClassOneHTMLTester('buttonRunChecks', 'click', ClassOneTester);
+    new ClassOneHTMLTester('buttonRunChecks', 'click', ClassOneTester, 'Aula1');
+    // new ClassTwoHTMLTester('buttonRunChecks', 'click', ClassTwoTester, 'Aula2');
 </script>
 </html>
