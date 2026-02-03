@@ -1,6 +1,7 @@
 export class Tester {
     constructor(className) {
-        this.className = className;
+        this.classID = className;
+        this.elementsToCheck = [];
     }
 
     /**
@@ -8,7 +9,14 @@ export class Tester {
      * @param content Conteúdo da página HTML, como uma string.
      */
     test(content) {
-         throw new Error("Este método deve ser implementado em uma subclasse!");
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(content, 'text/html');
+
+        let checks = [];
+        for(let i = 0; i < this.elementsToCheck.length; i++) {
+            checks.push(this.elementsToCheck[i].test(doc));
+        }
+        return checks;
     }
 }
 
@@ -16,9 +24,9 @@ export class Tester {
  * Agrupa testadores de uma aula.
  */
 export class ClassTester {
-    constructor(elementID, eventType, testerClass, className, parentElement) {
+    constructor(elementID, eventType, testerClass, classID, parentElement) {
         this.parentElement = parentElement;
-        this.tester = new testerClass(className);
+        this.tester = new testerClass(classID);
         this.createHTMLContent();
         this.bindEventListener(elementID, eventType)
     }
@@ -29,29 +37,29 @@ export class ClassTester {
      */
     createHTMLContent() {
 
-        const a = document.createElement('a');
-
+        // botão
+        let a = document.createElement('a');
         a.className = 'btn btn-primary';
-        a.id = `btnAula${this.tester.className}`;
+        a.id = `btnAula${this.tester.classID}`;
         a.setAttribute('data-bs-toggle', 'collapse');
-        a.href = `#Aula${this.tester.className}CollapseDiv`;
+        a.href = `#aula${this.tester.classID}CollapseDiv`;
         a.setAttribute('role', 'button');
         a.setAttribute('aria-expanded', 'false');
-        a.setAttribute('aria-controls', 'AulaCollapseDiv');
-        a.textContent = `${this.tester.className}`;
+        a.setAttribute('aria-controls', `aula${this.tester.classID}CollapseDiv`);
+        a.textContent = `Aula ${this.tester.classID}`;
 
-        const p = document.createElement('p');
+        let p = document.createElement('p');
         p.appendChild(a);
 
         // <div class="collapse">
-        const collapseDiv = document.createElement('div');
+        let collapseDiv = document.createElement('div');
         collapseDiv.className = 'collapse';
-        collapseDiv.id = `Aula${this.tester.className}CollapseDiv`;
+        collapseDiv.id = `aula${this.tester.classID}CollapseDiv`;
 
         // <div class="card card-body">
-        const cardDiv = document.createElement('div');
+        let cardDiv = document.createElement('div');
         cardDiv.className = 'card card-body';
-        cardDiv.id = `Aula${this.tester.className}CollapseCard`;
+        cardDiv.id = `aula${this.tester.classID}CollapseCard`;
 
         collapseDiv.appendChild(cardDiv);
 
@@ -78,7 +86,7 @@ export class ClassTester {
      */
     testCallback(event) {
         const files = document.getElementById('fileInput').files;
-        if (!files) {
+        if (!files || (files.length === 0)) {
             const modalElement = document.getElementById('modalError');
             const modal = new bootstrap.Modal(modalElement);
             modal.show();
@@ -92,10 +100,11 @@ export class ClassTester {
 
                         for(let i = 0; i < checks.length; i++) {
                             countChecked += checks[i];
-                            document.getElementById(this.tester.className + this.tester.elementsToCheck[i].name).checked = checks[i];
+                            console.log(`checkAula${this.tester.classID}${this.tester.elementsToCheck[i].name}`);
+                            document.getElementById(`inputAula${this.tester.classID}${this.tester.elementsToCheck[i].name}`).checked = checks[i];
                         }
                         if(countChecked === this.tester.elementsToCheck.length) {
-                            document.getElementById('btn' + this.tester.className).setAttribute('class', 'btn btn-success');
+                            document.getElementById('btnAula' + this.tester.classID).setAttribute('class', 'btn btn-success');
                         }
                     };
                     reader.readAsText(files[i]);

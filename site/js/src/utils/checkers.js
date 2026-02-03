@@ -4,7 +4,7 @@
 class Checker {
     constructor(name, className) {
         this.name = name;
-        this.className = className;
+        this.classID = className;
     }
 
     build() {
@@ -20,19 +20,19 @@ export class HTMLTagChecker extends Checker {
     build(parentElement) {
         let template = document.createElement('div');
         template.setAttribute('class', 'form-check');
-        template.setAttribute('id', 'check_' + this.name);
+        template.setAttribute('id', 'checkAula' + this.classID + this.name);
 
         let input = document.createElement('input');
         input.setAttribute('type', 'checkbox');
         input.setAttribute('class', 'form-check-input');
-        input.setAttribute('id', this.className + this.name);
+        input.setAttribute('id', 'inputAula' + this.classID + this.name);
         input.setAttribute('value', '');
         input.addEventListener("click", e => e.preventDefault());
         input.addEventListener("keydown", e => e.preventDefault());
 
         template.appendChild(input);
         let label = document.createElement('label');
-        label.setAttribute('for', this.className + this.name);
+        label.setAttribute('for', 'inputAula' + this.classID + this.name);
         label.setAttribute('class', 'form-check-label');
         label.innerHTML = this.name;
         template.appendChild(label);

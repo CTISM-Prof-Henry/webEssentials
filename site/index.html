@@ -13,18 +13,12 @@
     <div class="row">
         <div class="col">
             <header>
-
                 <h1>Testador</h1>
 
                 <p>Este site é um testador de páginas HTML. Ele será utilizado no decorrer da disciplina para verificar
                     a implementação dos recursos vistos em aula.</p>
 
                 <p>Faça upload dos arquivos do seu site (.html, .css, .js) para fazer as verificações.</p>
-
-                <div class="mb-3">
-
-
-                </div>
             </header>
             <main id="div-main">
                 <div class="modal fade" id="modalError" tabindex="-1" aria-labelledby="modalErrorLabel" aria-hidden="true">
@@ -51,28 +45,6 @@
                             <button class="btn btn-primary" id="buttonRunChecks">Verificar</button>
                         </div>
                     </div>
-
-<!--                    <p>-->
-<!--                        <a class="btn btn-primary" id="btnAula1" data-bs-toggle="collapse" href="#Aula1CollapseDiv" role="button"-->
-<!--                           aria-expanded="false" aria-controls="collapseExample">-->
-<!--                            Aula 1-->
-<!--                        </a>-->
-<!--                    </p>-->
-<!--                    <div class="collapse" id="Aula1CollapseDiv">-->
-<!--                        <div class="card card-body" id="Aula1CollapseCard">-->
-<!--                        </div>-->
-<!--                    </div>-->
-
-<!--                    <p>-->
-<!--                        <a class="btn btn-primary" id="btnAula2" data-bs-toggle="collapse" href="#Aula2CollapseDiv" role="button"-->
-<!--                           aria-expanded="false" aria-controls="collapseExample">-->
-<!--                            Aula 2-->
-<!--                        </a>-->
-<!--                    </p>-->
-<!--                    <div class="collapse" id="Aula2CollapseDiv">-->
-<!--                        <div class="card card-body" id="Aula2CollapseCard">-->
-<!--                        </div>-->
-<!--                    </div>-->
                 </div>
             </main>
         </div>
@@ -84,9 +56,11 @@
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
 <script type="module">
-    import { ClassOneTester } from './js/src/classOne.js';
-    import { ClassTester } from "./js/src/utils/testers";
+    import { ClassOneTester, ClassTwoTester, ClassThreeTester } from './js/src/classTesters.js';
+    import { ClassTester } from "./js/src/utils/testers.js";
 
-    new ClassTester('buttonRunChecks', 'click', ClassOneTester, 'Aula1', document.getElementById('mainGridDiv'));
+    new ClassTester('buttonRunChecks', 'click', ClassOneTester, 1, document.getElementById('mainGridDiv'));
+    new ClassTester('buttonRunChecks', 'click', ClassTwoTester, 2, document.getElementById('mainGridDiv'));
+    new ClassTester('buttonRunChecks', 'click', ClassThreeTester, 3, document.getElementById('mainGridDiv'));
 </script>
 </html>
