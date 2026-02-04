@@ -72,6 +72,27 @@ export class DoctypeChecker extends HTMLTagChecker {
 
 export class CSSChecker extends Checker {
     test(doc) {
+        for (const sheet of document.styleSheets) {
+            let rules;
+            try {
+                rules = sheet.cssRules;
+            } catch (e) {
+                // stylesheet cross-origin (Bootstrap CDN, etc)
+                continue;
+            }
 
+            for (const rule of rules) {
+                if (!rule.selectorText) continue;
+
+                // selectors can be comma-separated: "p, li, span"
+                const selectors = rule.selectorText.split(',')
+                    .map(s => s.trim());
+
+                if (selectors.includes(this.name)) {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 }

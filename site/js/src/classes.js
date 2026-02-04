@@ -1,5 +1,5 @@
-import {DoctypeChecker, HTMLTagChecker} from "./utils/checkers.js";
-import {HTMLParser} from "./utils/parsers";
+import {CSSChecker, DoctypeChecker, HTMLTagChecker} from "./utils/checkers.js";
+import {HTMLParser, CSSParser} from "./utils/parsers.js";
 
 export class ClassOneTester extends HTMLParser {
     constructor(className) {
@@ -41,6 +41,18 @@ export class ClassThreeTester extends HTMLParser {
             new HTMLTagChecker('div', className),
             new HTMLTagChecker('header', className),
             new HTMLTagChecker('section', className),
+        ];
+    }
+}
+
+export class ClassFourTester extends CSSParser {
+    constructor(className) {
+        super(className);
+        this.elementsToCheck = [
+            new CSSChecker('tag', className),
+            new CSSChecker('class', className),
+            new CSSChecker('id', className),
+            new CSSChecker('pseudoclass', className),
         ];
     }
 }
