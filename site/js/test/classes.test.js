@@ -1,7 +1,7 @@
 import { readFileSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname, resolve } from 'path';
-import { ClassOneTester } from '../src/classTesters.js';
+import { ClassOneTester } from '../src/classes.js';
 import { JSDOM } from 'jsdom'
 
 const __filename = fileURLToPath(import.meta.url);

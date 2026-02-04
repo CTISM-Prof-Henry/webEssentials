@@ -1,7 +1,7 @@
-import {HTMLTagTester} from "./utils/testers.js";
 import {DoctypeChecker, HTMLTagChecker} from "./utils/checkers.js";
+import {HTMLParser} from "./utils/parsers";
 
-export class ClassOneTester extends HTMLTagTester {
+export class ClassOneTester extends HTMLParser {
     constructor(className) {
         super(className);
         this.elementsToCheck = [
@@ -15,7 +15,7 @@ export class ClassOneTester extends HTMLTagTester {
     }
 }
 
-export class ClassTwoTester extends HTMLTagTester {
+export class ClassTwoTester extends HTMLParser {
     constructor(className) {
         super(className);
         this.elementsToCheck = [
@@ -33,7 +33,7 @@ export class ClassTwoTester extends HTMLTagTester {
     }
 }
 
-export class ClassThreeTester extends HTMLTagTester {
+export class ClassThreeTester extends HTMLParser {
     constructor(className) {
         super(className);
         this.elementsToCheck = [

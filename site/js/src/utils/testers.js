@@ -1,33 +1,5 @@
-class Tester {
-    constructor(className) {
-        this.classID = className;
-        this.elementsToCheck = [];
-    }
-
-    test(content) {
-        throw new Error("Este método deve ser implementado em uma subclasse!");
-    }
-}
-
-export class HTMLTagTester extends Tester {
-    /**
-     * Testa se uma página HTML (fornecida como uma string) atende os critérios dessa classe de teste.
-     * @param content Conteúdo da página HTML, como uma string.
-     */
-    test(content) {
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(content, 'text/html');
-
-        let checks = [];
-        for(let i = 0; i < this.elementsToCheck.length; i++) {
-            checks.push(this.elementsToCheck[i].test(doc));
-        }
-        return checks;
-    }
-}
-
 /**
- * Agrupa testadores de uma aula.
+ * Agrupa testadores de uma aula. Cria elementos HTML na página do testador e manipula DOM diretamente.
  */
 export class ClassTester {
     constructor(elementID, eventType, testerClass, classID, parentElement) {

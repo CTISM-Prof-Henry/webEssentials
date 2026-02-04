@@ -4,7 +4,7 @@
 class Checker {
     /**
      * Constrói este checker.
-     * @param name Nome do elemento sendo verificado (e.g. uma tag html, HTML, doctype, p, a, img, etc)
+     * @param name Nome do elemento sendo verificado (e.g. uma tag html, doctype, p, a, img, etc)
      * @param className o número da aula (e.g. 1, 2, 3).
      */
     constructor(name, className) {
