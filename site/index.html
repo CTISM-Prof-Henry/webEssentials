@@ -56,11 +56,53 @@
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
 <script type="module">
-    import { ClassOneTester, ClassTwoTester, ClassThreeTester } from './js/src/classes.js';
     import { ClassTester } from "./js/src/utils/testers.js";
+    import {HTMLParser, CSSParser} from "./js/src/utils/parsers.js";
+    import {DoctypeChecker, HTMLTagChecker, CSSChecker} from "./js/src/utils/checkers.js";
 
-    new ClassTester('buttonRunChecks', 'click', ClassOneTester, 1, document.getElementById('mainGridDiv'));
-    new ClassTester('buttonRunChecks', 'click', ClassTwoTester, 2, document.getElementById('mainGridDiv'));
-    new ClassTester('buttonRunChecks', 'click', ClassThreeTester, 3, document.getElementById('mainGridDiv'));
+    new ClassTester('buttonRunChecks', 'click', new HTMLParser(
+            1, [
+                new DoctypeChecker(),
+                new HTMLTagChecker('html'),
+                new HTMLTagChecker('head'),
+                new HTMLTagChecker('body'),
+                new HTMLTagChecker('h1'),
+                new HTMLTagChecker('p'),
+            ]),
+        document.getElementById('mainGridDiv')
+    );
+    new ClassTester('buttonRunChecks', 'click', new HTMLParser(
+        2, [
+            new HTMLTagChecker('h2'),
+            new HTMLTagChecker('table'),
+            new HTMLTagChecker('th'),
+            new HTMLTagChecker('tr'),
+            new HTMLTagChecker('td'),
+            new HTMLTagChecker('img'),
+            new HTMLTagChecker('a'),
+            new HTMLTagChecker('ul'),
+            new HTMLTagChecker('ol'),
+            new HTMLTagChecker('li'),
+        ]),
+        document.getElementById('mainGridDiv')
+    );
+    new ClassTester('buttonRunChecks', 'click', new HTMLParser(
+        3, [
+            new HTMLTagChecker('main'),
+            new HTMLTagChecker('div'),
+            new HTMLTagChecker('header'),
+            new HTMLTagChecker('section'),
+        ]),
+        document.getElementById('mainGridDiv')
+    );
+    new ClassTester('buttonRunChecks', 'click', new CSSParser(
+        4, [
+            new CSSChecker('tag'),
+            new CSSChecker('classe'),
+            new CSSChecker('id'),
+            new CSSChecker('pseudoclasse'),
+        ]),
+        document.getElementById('mainGridDiv')
+    );
 </script>
 </html>

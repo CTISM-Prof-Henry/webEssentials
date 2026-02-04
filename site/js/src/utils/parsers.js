@@ -3,9 +3,9 @@
  * compatibilidade com o node.js.
  */
 class Parser {
-    constructor(className) {
-        this.classID = className;
-        this.elementsToCheck = [];
+    constructor(classID, elementsToCheck) {
+        this.classID = classID;
+        this.elementsToCheck = elementsToCheck;
     }
 
     test(content) {
@@ -41,7 +41,7 @@ export class CSSParser extends Parser {
      */
     test(content) {
         const sheet = new CSSStyleSheet();
-        sheet.replaceSync(cssText);
+        sheet.replaceSync(content);
 
         let checks = [];
         for (let i = 0; i < this.elementsToCheck.length; i++) {
