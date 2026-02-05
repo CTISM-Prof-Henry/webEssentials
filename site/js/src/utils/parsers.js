@@ -11,6 +11,10 @@ class Parser {
     test(content) {
         throw new Error("Este método deve ser implementado em uma subclasse!");
     }
+
+    isCorrectFileType(fileName) {
+        throw new Error("Este método deve ser implementado em uma subclasse!");
+    }
 }
 
 /**
@@ -31,9 +35,12 @@ export class HTMLParser extends Parser {
         }
         return checks;
     }
+
+    isCorrectFileType(fileName) {
+        return fileName.toLowerCase().includes('.html') || fileName.toLowerCase().endsWith('.htm');
+    }
 }
 
-// TODO implementando!
 export class CSSParser extends Parser {
     /**
      * Testa se uma página CSS (fornecida como uma string) atende os critérios dessa classe de teste.
@@ -48,5 +55,9 @@ export class CSSParser extends Parser {
             checks.push(this.elementsToCheck[i].test(sheet));
         }
         return checks;
+    }
+
+    isCorrectFileType(fileName) {
+        return fileName.toLowerCase().endsWith('.css');
     }
 }

@@ -70,42 +70,58 @@ export class DoctypeChecker extends HTMLTagChecker {
 }
 
 export class CSSChecker extends Checker {
-    hasRequiredSelector(selector) {
-        if(this.name === 'tag') {
-            // tags são compostas apenas por letras, números, hífens e underscores
-            return /^[a-zA-Z0-9\-_]+$/.test(selector);
-        } else if(this.name === 'classe') {
-            return selector.includes('.');
-        } else if(this.name === 'id') {
-            return selector.startsWith('#');
-        } else if(this.name === 'pseudoclasse') {
-            return selector.includes(':');
+    isValidSelector(selector) {
+        try {
+            document.querySelector(selector);
+            return true;
+        } catch {
+            return false;
         }
-        return false;
+    }
+
+    hasRequiredSelector(selector) {
+        if(!this.isValidSelector(selector)) {
+            return false;
+        }
+
+        switch (this.name) {
+            case 'tag':
+                // exactly one type selector: div, h1, custom-element
+                return /^[a-zA-Z][a-zA-Z0-9-]*$/.test(selector);
+
+            case 'classe':
+                return selector.includes('.');
+
+            case 'id':
+                return selector.includes('#');
+
+            case 'pseudoclasse':
+                return selector.includes(':');
+
+            default:
+                return false;
+        }
     }
 
     test(doc) {
-        for (const sheet of document.styleSheets) {
-            let rules;
-            try {
-                rules = sheet.cssRules;
-            } catch (e) {
-                // stylesheet cross-origin (Bootstrap CDN, etc)
+        let rules;
+        try {
+            rules = doc.cssRules;
+        } catch (e) {
+            // malformed CSS or unsupported rule
+            return false;
+        }
+
+        for (const rule of rules) {
+            if (!rule.selectorText) {
                 continue;
             }
 
-            for (const rule of rules) {
-                if (!rule.selectorText) {
-                    continue;
-                }
-
-                // selectors can be comma-separated: "p, li, span"
-                const selectors = rule.selectorText.split(',').map(s => s.trim());
-                for(let j = 0; j < selectors.length; j++) {
-                    if(this.hasRequiredSelector(selectors[j])) {
-                        // TODO tem que verificar se está ativo!
-                        return true;
-                    }
+            // selectors can be comma-separated: "p, li, span"
+            const selectors = rule.selectorText.split(',').map(s => s.trim());
+            for (const selector of selectors) {
+                if (this.hasRequiredSelector(selector)) {
+                    return true;
                 }
             }
         }

@@ -70,7 +70,7 @@ export class ClassTester {
             modal.show();
         } else {
             for(let i = 0; i < files.length; i++) {
-                if(files[i].name.includes('htm')) {
+                if(this.parser.isCorrectFileType(files[i].name)) {
                     const reader = new FileReader();
                     reader.onload = (e) => {
                         const checks = this.parser.test(e.target.result);
