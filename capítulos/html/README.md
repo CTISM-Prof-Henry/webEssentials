@@ -1,3 +1,66 @@
 # HTML
 
 Do inglês Hypertext Markup Language.
+
+## Tags em HTML
+
+O site W3Schools possui uma lista em ordem alfabética das tags HTML: [link](https://www.w3schools.com/tags/default.asp)
+
+### Tags elementares
+
+Toda página HTML deve conter as seguintes tags elementares:
+
+* `<!DOCTYPE html>`: Declaração do tipo de documento, indicando que é um documento HTML5.
+* `<html>`: Elemento raiz que envolve todo o conteúdo da página.
+* `<head>`: Contém metadados, como título da página, links para arquivos CSS, scripts JavaScript, etc.
+* `<title>`: Define o título da página, que é exibido na barra de título do navegador.
+* `<body>`: Contém o conteúdo visível da página, como texto, imagens, links, etc.
+
+## Tags básicas
+
+Essas tags não são elementares, mas é difícil encontrar uma página HTML sem elas, de tão básicas que são:
+
+* `<h1>` a `<h6>`: Tags de cabeçalho, usadas para títulos e subtítulos, onde `<h1>` é o mais importante e `<h6>` o
+  menos importante.
+* `<p>`: Define um parágrafo de texto.
+* `<a>`: Define um link para outra página ou recurso.
+* `<img>`: Insere uma imagem na página.
+
+## Containers
+
+Essas tags delimitam containers para outros elementos, ou seja, são usadas para agrupar outros elementos e aplicar
+estilos ou comportamentos a eles:
+
+### Genéricos
+
+* `<div>`: Define uma divisão ou seção genérica na página, usada para agrupar elementos e aplicar estilos. É do tipo
+  `block`
+* `<span>`: Define uma divisão ou seção genérica na página, usada para agrupar elementos e aplicar estilos. É do tipo
+  `inline`
+
+### Semânticos
+
+* `<header>`: Define um cabeçalho para um documento ou seção, usado para agrupar elementos de introdução.
+* `<nav>`: Define uma seção de navegação, usada para agrupar links de nave
+* `<main>`: Define o conteúdo principal de um documento, usado para agrupar o conteúdo mais importante da página.
+* `<section>`: Define uma seção genérica na página, usada para agrupar conteúdo relacionado.
+* `<article>`: Define um conteúdo independente, como um artigo de blog ou uma notícia.
+* `<aside>`: Define um conteúdo relacionado, mas separado do conteúdo principal, como uma barra lateral ou um bloco de
+  informações adicionais.
+* `<footer>`: Define um rodapé para um documento ou seção, usado para agrupar elementos de conclusão, como informações
+  de contato, direitos autorais, etc.
+
+### Especializados
+
+* `<figure>`: Define um conteúdo ilustrativo, como uma imagem ou um gráfico, e pode conter uma legenda usando a tag
+  `<figcaption>`:
+  ```html
+  <figure>
+  <img src="gato.jpg">
+  <figcaption>Um gato dormindo.</figcaption>
+  </figure>
+  ```
+* `<details>`: Define um conteúdo que pode ser expandido ou recolhido pelo usuário, como um bloco de informações
+  adicionais ou uma seção de perguntas frequentes.
+* `<summary>`: Define um resumo ou título para o conteúdo dentro de uma tag `<details>`, que é exibido quando o conteúdo
+  está recolhido.
