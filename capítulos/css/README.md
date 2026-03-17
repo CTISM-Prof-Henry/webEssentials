@@ -83,7 +83,6 @@ p {
 }
 ```
 
-
 ### Seletor de classe
 
 Seleciona elementos HTML com uma classe específica, por exemplo `.vermelho` para selecionar todos os elementos com a
@@ -134,3 +133,22 @@ p:hover {
     color: red;
 }
 ```
+
+## Propriedades do CSS
+
+Existem inúmeras propriedades de estilo em CSS, cada uma controlando um aspecto diferente da aparência dos elementos
+HTML. Algumas das propriedades mais comuns incluem:
+
+* `color`: Define a cor do texto.
+* `background-color`: Define a cor de fundo de um elemento.
+* `font-size`: Define o tamanho da fonte.
+* `font-family`: Define a família de fontes.
+* `margin`: Define a margem externa de um elemento.
+* `padding`: Define o preenchimento interno de um elemento.
+* `border`: Define a borda de um elemento.
+* `display`: Define como um elemento é exibido, por exemplo `block`, `inline`, `flex`, etc.
+* `position`: Define o tipo de posicionamento de um elemento, por exemplo `static`,
+* `relative`, `absolute`, `fixed`, etc.
+* `width` e `height`: Definem a largura e altura de um elemento.
+
+Para uma lista completa, visite o site da W3 Schools: [link](https://www.w3schools.com/css/default.asp).
