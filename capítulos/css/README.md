@@ -155,6 +155,8 @@ HTML. Algumas das propriedades mais comuns incluem:
 
 Para uma lista completa, visite o site da W3 Schools: [link](https://www.w3schools.com/css/default.asp).
 
+Uma lista interessante de propriedades é fornecida [aqui](https://medium.com/@zmactavish/30-css-styles-to-know-0643beac797a).
+
 ## Exercícios
 
 Crie um arquivo HTML novo para realizar os seguintes exercícios:
