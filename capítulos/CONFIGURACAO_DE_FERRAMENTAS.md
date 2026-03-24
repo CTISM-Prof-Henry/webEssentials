@@ -50,3 +50,7 @@ para trabalhar.
 O seguinte vídeo possui recomendações de configuração para o Webstorm:
 
 https://youtu.be/_vpFcIdyRKs
+
+O seguinte vídeo explica como baixar arquivos do GitHub, editá-los no Webstorm, e fazer upload novamente para o GitHub:
+
+https://youtu.be/sAPe1sTnub8
