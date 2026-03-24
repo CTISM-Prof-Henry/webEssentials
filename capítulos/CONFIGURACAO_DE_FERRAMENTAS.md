@@ -47,3 +47,6 @@ possui recursos avançados, um IDE possui navegador de arquivos, detector de err
 integrado, etc. Esta é a opção definitiva para desenvolvimento; nenhum desenvolvedor Web sério deixa de usar uma IDE
 para trabalhar.
 
+O seguinte vídeo possui recomendações de configuração para o Webstorm:
+
+https://youtu.be/_vpFcIdyRKs
