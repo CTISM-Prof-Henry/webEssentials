@@ -40,6 +40,8 @@ estilos ou comportamentos a eles:
 
 ### Semânticos
 
+![semantics](https://www.w3schools.com/html/img_sem_elements.gif)
+
 * `<header>`: Define um cabeçalho para um documento ou seção, usado para agrupar elementos de introdução.
 * `<nav>`: Define uma seção de navegação, usada para agrupar links de nave
 * `<main>`: Define o conteúdo principal de um documento, usado para agrupar o conteúdo mais importante da página.
@@ -50,13 +52,15 @@ estilos ou comportamentos a eles:
 * `<footer>`: Define um rodapé para um documento ou seção, usado para agrupar elementos de conclusão, como informações
   de contato, direitos autorais, etc.
 
+Uma lista completa está disponível no site [W3Schools](https://www.w3schools.com/html/html5_semantic_elements.asp).
+
 ### Especializados
 
 * `<figure>`: Define um conteúdo ilustrativo, como uma imagem ou um gráfico, e pode conter uma legenda usando a tag
   `<figcaption>`:
   ```html
   <figure>
-  <img src="gato.jpg">
+  <img alt="imagem de um gato" src="gato.jpg">
   <figcaption>Um gato dormindo.</figcaption>
   </figure>
   ```
