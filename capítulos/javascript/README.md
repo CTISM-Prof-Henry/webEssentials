@@ -3,6 +3,11 @@
 Javascript é uma linguagem de programação interpretada, executada nos navegadores da Web (ou do lado do cliente em uma 
 relação cliente-servidor).
 
+## Diferença entre `let` e `var`
+
+Consulte o site [Design Gurus](https://www.designgurus.io/answers/detail/what-is-the-difference-between-let-and-var) 
+para uma explicação detalhada sobre a diferença entre `let` e `var`. 
+
 ## Conteúdos
 
 1. Operações matemáticas
