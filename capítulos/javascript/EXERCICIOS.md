@@ -1,6 +1,6 @@
-# Perguntas
+# Exercícios
 
-# HTML
+## HTML
 
 1. Por que usamos `<!DOCTYPE html>` no topo do documento HTML?
 2. Qual a diferença entre `<head>` e `<body>`?
@@ -13,7 +13,7 @@
 9. Qual a importância das tags `h1` até `h6`?
 10. Quantas tags `<h1>` uma página deve ter?
 
-# CSS
+## CSS
 
 1. O que é CSS? Para que é usado?
 2. Quais são as três formas de utilizar CSS em um documento Web?
@@ -26,7 +26,7 @@
 9. Qual a utilidade da responsividade em um site?
 10. Qual a diferença entre `vh`, `vw`, `px`, `%` e `em`?
 
-# Javascript
+## Javascript
 
 1. A linguagem Javascript é compilada ou interpretada? Por quê?
 2. Para quê serve Javascript? É possível escrever um site sem Javascript? Por quê?
