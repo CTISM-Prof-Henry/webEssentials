@@ -149,11 +149,12 @@ HTML. Algumas das propriedades mais comuns incluem:
 * `padding`: Define o preenchimento interno de um elemento.
 * `border`: Define a borda de um elemento.
 * `display`: Define como um elemento é exibido, por exemplo `block`, `inline`, `flex`, etc.
-* `position`: Define o tipo de posicionamento de um elemento, por exemplo `static`,
-* `relative`, `absolute`, `fixed`, etc.
+* `position`: Define o tipo de posicionamento de um elemento, por exemplo `static`, `relative`, `absolute`, `fixed`, etc.
 * `width` e `height`: Definem a largura e altura de um elemento.
 
 Para uma lista completa, visite o site da W3 Schools: [link](https://www.w3schools.com/css/default.asp).
+
+Uma lista interessante de propriedades é fornecida [aqui](https://medium.com/@zmactavish/30-css-styles-to-know-0643beac797a).
 
 ## Exercícios
 
