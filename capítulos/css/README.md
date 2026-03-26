@@ -158,15 +158,4 @@ Uma lista interessante de propriedades é fornecida [aqui](https://medium.com/@z
 
 ## Exercícios
 
-Crie um arquivo HTML novo para realizar os seguintes exercícios:
-
-1. Crie um parágrafo e use CSS para alterar a cor do texto para azul.
-2. Crie um título e use CSS para alterar a fonte para Arial e o tamanho para 24px.
-3. Crie um link e use CSS para alterar a cor do link para verde e remover o sublinhado.
-4. Crie uma imagem e use CSS para definir a largura da imagem para 200px e a altura para 150px.
-5. Troque a cor de fundo da página para azul.
-6. Coloque uma imagem como plano de fundo da página.
-7. Troque o formato de borda das imagens para arredondado.
-8. Crie um parágrafo e use CSS para alterar a cor do texto para vermelho quando o mouse estiver sobre ele.
-9. Crie um título e use CSS para definir a posição como absoluta, posicionando-o no canto superior direito da página.
-10. Crie uma div e troque a cor da borda para vermelho.
+Movido para o arquivo [EXERCICIOS.md](EXERCICIOS.md).
