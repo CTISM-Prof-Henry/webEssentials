@@ -26,3 +26,11 @@ menores ou iguais a 600px de largura.
 
 ## Operadores
 
+As media queries podem usar os seguintes operadores para combinar condições:
+
+* `and`: Combina múltiplas condições. Por exemplo: `@media (min-width: 600px) and (max-width: 1200px) { ... }`
+* `not`: Negação de uma condição. Por exemplo: `@media not (min width: 600px) { ... }`
+* `only`: Aplica a media query apenas se o dispositivo atender à condição especificada. Por exemplo: `@media only screen
+  and (max-width: 600px) { ... }
+* `or`: Combina múltiplas condições, aplicando a media query se qualquer uma delas for verdadeira. Por exemplo:
+  `@media (min-width: 600px) or (orientation: portrait) { ... }`
