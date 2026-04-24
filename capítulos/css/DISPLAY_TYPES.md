@@ -43,3 +43,19 @@ alinhamento, espaçamento e ordem dos itens dentro do contêiner flexível.
 ![display_flex.png](../../imagens/display_flex.png)
 
 Consulte o seguinte link para uma explicação detalhada do flexbox: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+## Exercícios
+
+1. Em CSS, crie uma classe que ocupe 100 pixels de largura, 50 pixels de altura, tenha margem de 5 pixels e fundo azul. 
+   Chame esta classe de `item`
+2. Em CSS, crie uma classe de nome `container` que tenha `display: flex` e `flex-direction: column`. Em HTML, crie no 
+   mínimo 8 itens, e coloque-os dentro de um elemento com a classe `container`.
+3. Em CSS, modifique a classe `item` para que os itens pares tenham cor cinza escuro, e os itens ímpares tenham cor 
+   cinza claro. Use a pseudo-classe `nth-child` para isso.
+4. Mude a `flex-direction` da classe `container` para `row`. O que acontece com os itens? Por quê?
+5. Mude a `flex-direction` da classe `container` para `row-reverse`. O que acontece com os itens? Por quê?
+6. Mude a `flex-direction` da classe `container` para `column-reverse`. O que acontece com os itens? Por quê?
+7. Em CSS, adicione a propriedade `justify-content: center` à classe `container`. O que acontece com os itens? Por quê?
+8. Em CSS, adicione a propriedade `align-items: center` à classe `container`. O que acontece com os itens? Por quê?
+9. Em CSS, adicione a propriedade `flex-wrap: wrap` à classe `container`. O que acontece com os itens? Por quê?
+10. Em CSS, adicione a propriedade `gap: 10px` à classe `container`. O que acontece com os itens? Por quê?
