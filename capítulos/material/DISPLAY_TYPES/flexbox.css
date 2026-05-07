@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    height: 300px; /* nova propriedade! */
+    background-color: aquamarine;
+    flex-direction: row; /* row, column, row-reverse, column-reverse */
+    flex-wrap: nowrap; /* nowrap, wrap, wrap-reverse */
+    justify-content: center; /* flex-start, flex-end, center, space-between, space-around, space-evenly */
+    align-items: center; /* flex-start, flex-end, center, stretch, baseline */
+    /*gap: 50px;*/
+    row-gap: 50px;
+    column-gap: 10px;
+}
+
+.item {
+    width: 100px;
+    height: 50px;
+    margin: 5px;
+    border: 5px solid white;
+    padding: 5px;
+    background-color: lightpink;
+}
