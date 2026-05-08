@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Exemplo formulário</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .item {
+            width: 50%;
+            margin: 15px;
+            padding: 15px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<main>
+    <div class="container">
+        <div class="item">
+            <h1>Exemplo formulário</h1>
+
+            <p>Um exemplo um pouco mais sofisticado de uso de formulários em HTML.</p>
+        </div>
+        <div class="item">
+            <form onsubmit="event.preventDefault();">
+                <div style="display: flex; flex-direction: column; gap: 15px;">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <button id="button-submit" type="submit">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
+</body>
+<script type="application/javascript">
+    function sayHello() {
+        let nome = document.getElementById('nome').value;
+        let email = document.getElementById('email').value;
+
+        if (nome === '' || email === '') {
+            alert('Por favor, preencha todos os campos.');
+        } else {
+            alert('Olá ' + nome + '! Seu email é ' + email);
+        }
+    }
+
+    document.getElementById('button-submit').addEventListener('click', sayHello);
+
+</script>
+</html>
