@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo media query</title>
+    <style>
+        /* tela maior de 600px */
+        body {
+            background-color: lightblue;
+        }
+        h1 {
+            font-size: 24pt;
+        }
+        p {
+            font-size: 18pt;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .item {
+            margin: 5px;
+            padding: 5px;
+            width: 200px;
+            border: 3px solid darkslategrey;
+            background-color: white;
+        }
+
+        /* tela menor de 600px */
+        @media (max-width: 600px) {
+            body {
+                background-color: lightpink;
+            }
+            h1 {
+                font-size: 36pt;
+            }
+            p {
+                font-size: 28pt;
+            }
+
+            .container {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<h1>Exemplo media query</h1>
+<p>Essa página explica o funcionamento de media query.</p>
+
+<div class="container">
+    <div class="item"><p>Olá mundo!</p></div>
+    <div class="item"><p>Olá terra!</p></div>
+</div>
+</body>
+</html>
