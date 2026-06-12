@@ -11,11 +11,6 @@
             color: black;
             transition: 0.3s;
         }
-
-        .dark {
-            background-color: #222;
-            color: white;
-        }
     </style>
 </head>
 <body>
@@ -29,8 +24,17 @@
 </button>
 
 <script>
+    let ativo = true;
+
     function trocarTema() {
-        document.body.classList.toggle('dark');
+        ativo = !ativo;
+        if(ativo) {
+            document.body.style.backgroundColor = '#fff';
+            document.body.style.color = '#222';
+        } else {
+            document.body.style.backgroundColor = '#222';
+            document.body.style.color = '#fff';
+        }
     }
     document.getElementById('themeButton').addEventListener('click', trocarTema);
 </script>
