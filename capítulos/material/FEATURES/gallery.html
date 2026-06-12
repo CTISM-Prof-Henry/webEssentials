@@ -17,13 +17,13 @@
 >
 <br/>
 <br/>
-<img src='https://picsum.photos/id/10/400/300' class='thumb' width='120px'>
-<img src='https://picsum.photos/id/20/400/300' class='thumb' width='120px'>
-<img src='https://picsum.photos/id/30/400/300' class='thumb' width='120px'>
+<img src='https://picsum.photos/id/10/400/300' class='menor' width='120px'>
+<img src='https://picsum.photos/id/20/400/300' class='menor' width='120px'>
+<img src='https://picsum.photos/id/30/400/300' class='menor' width='120px'>
 </body>
 <script>
-    let principal = document.getElementById('imagem_principal');
-    let imagens = document.getElementsByClassName('thumb');
+    let principal = document.getElementById('imagem_principal');  // 1 elemento
+    let imagens = document.getElementsByClassName('menor');  // array com 3 elementos
 
     for(let i = 0; i < imagens.length; i++) {
         imagens[i].addEventListener('mouseover', () => {
