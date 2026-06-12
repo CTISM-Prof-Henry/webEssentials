@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Galeria</title>
+</head>
+<body>
+<h1>Galeria</h1>
+
+<p>Passe o mouse por cima das imagens abaixo.</p>
+
+<img
+        id="mainImage"
+        src="https://picsum.photos/id/10/400/300"
+        width="400"
+>
+<br/>
+<br/>
+
+<img src="https://picsum.photos/id/10/100/80" class="thumb">
+<img src="https://picsum.photos/id/20/100/80" class="thumb">
+<img src="https://picsum.photos/id/30/100/80" class="thumb">
+</body>
+<script>
+    const mainImage = document.getElementById("mainImage");
+
+    const thumbnails = document.querySelectorAll(".thumb");
+    thumbnails.forEach(function (image) {
+        image.addEventListener('mouseover', function () {
+            mainImage.src = image.src.replace("100/80", "400/300");
+        });
+    });
+</script>
+</html>

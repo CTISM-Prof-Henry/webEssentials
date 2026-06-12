@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tema escuro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            color: black;
+            transition: 0.3s;
+        }
+
+        .dark {
+            background-color: #222;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Tema escuro</h1>
+
+<p>Clique no botão abaixo para trocar o tema.</p>
+
+<button id="themeButton">
+    Trocar tema
+</button>
+
+<script>
+    function trocarTema() {
+        document.body.classList.toggle('dark');
+    }
+    document.getElementById('themeButton').addEventListener('click', trocarTema);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Esconder conteúdo</title>
+</head>
+<body>
+<h1>Esconder conteúdo</h1>
+
+<p>
+    Use o botão abaixo para mostrar a imagem.
+</p>
+
+<button id="toggle">
+    Mostrar
+</button>
+<br/>
+<br/>
+
+<img alt="um cachorro chamado marvin" id="marvin" src="../../../imagens/marvin.jpg" style="display: none;"/>
+</body>
+
+<script>
+    const button = document.getElementById('toggle');
+
+    function toggleHide() {
+        let details = document.getElementById("marvin");
+        if (details.style.display === "none") {
+            details.style.display = "block";
+            button.textContent = "Esconder";
+        } else {
+            details.style.display = "none";
+            button.textContent = "Mostrar";
+        }
+    }
+
+    button.addEventListener('click', toggleHide);
+</script>
+</html>
