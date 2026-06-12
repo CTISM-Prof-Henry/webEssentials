@@ -4,6 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Esconder conteúdo</title>
+    <style>
+        #marvin {
+            visibility: hidden;  /* começa escondido */
+        }
+    </style>
 </head>
 <body>
 <h1>Esconder conteúdo</h1>
@@ -19,7 +24,7 @@
 <br/>
 
 <!-- imagem começa oculta com display: none -->
-<img alt="um cachorro chamado marvin" id="marvin" src="../../../imagens/marvin.jpg" style="display: none;"/>
+<img alt="um cachorro chamado marvin" id="marvin" src="../../../imagens/marvin.jpg"/>
 </body>
 <script>
     let button = document.getElementById('alternar');
@@ -29,11 +34,11 @@
         let imagem = document.getElementById('marvin');
 
         // se a imagem está oculta
-        if (imagem.style.display === 'none') {
-            imagem.style.display = 'block';  //  mostra a imagem
+        if (imagem.style.visibility === 'visible') {
+            imagem.style.visibility = 'hidden';
             button.textContent = 'Esconder';  // troca texto do botão
         } else {  // se a imagem estiver visível
-            imagem.style.display = 'none';  // esconde a imagem
+            imagem.style.visibility = 'visible';
             button.textContent = 'Mostrar';  // troca o texto do botão
         }
     }
