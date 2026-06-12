@@ -23,8 +23,8 @@
 <br/>
 <br/>
 
-<!-- imagem começa oculta com display: none -->
-<img alt="um cachorro chamado marvin" id="marvin" src="../../../imagens/marvin.jpg"/>
+<!-- imagem começa oculta -->
+<img id="marvin" alt="um cachorro chamado marvin" src="../../../imagens/marvin.jpg" >
 </body>
 <script>
     let button = document.getElementById('alternar');
@@ -32,12 +32,11 @@
     function alternar() {
         // seleciona a imagem usando seu id
         let imagem = document.getElementById('marvin');
-
-        // se a imagem está oculta
+        // se a imagem está visível
         if (imagem.style.visibility === 'visible') {
             imagem.style.visibility = 'hidden';
             button.textContent = 'Esconder';  // troca texto do botão
-        } else {  // se a imagem estiver visível
+        } else {  // se a imagem estiver oculta
             imagem.style.visibility = 'visible';
             button.textContent = 'Mostrar';  // troca o texto do botão
         }
