@@ -12,28 +12,31 @@
     Use o botão abaixo para mostrar a imagem.
 </p>
 
-<button id="toggle">
+<button id="alternar">
     Mostrar
 </button>
 <br/>
 <br/>
 
+<!-- imagem começa oculta com display: none -->
 <img alt="um cachorro chamado marvin" id="marvin" src="../../../imagens/marvin.jpg" style="display: none;"/>
 </body>
 <script>
-    const button = document.getElementById('toggle');
+    let button = document.getElementById('alternar');
 
-    function toggleHide() {
-        let details = document.getElementById("marvin");
-        if (details.style.display === "none") {
-            details.style.display = "block";
-            button.textContent = "Esconder";
-        } else {
-            details.style.display = "none";
-            button.textContent = "Mostrar";
+    function alternar() {
+        // seleciona a imagem usando seu id
+        let imagem = document.getElementById('marvin');
+
+        // se a imagem está oculta
+        if (imagem.style.display === 'none') {
+            imagem.style.display = 'block';  //  mostra a imagem
+            button.textContent = 'Esconder';  // troca texto do botão
+        } else {  // se a imagem estiver visível
+            imagem.style.display = 'none';  // esconde a imagem
+            button.textContent = 'Mostrar';  // troca o texto do botão
         }
     }
-
-    button.addEventListener('click', toggleHide);
+    button.addEventListener('click', alternar);
 </script>
 </html>
