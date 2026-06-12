@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Modal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* overlay do modal: fundo preto transparente */
+        .modal-overlay {
+            display: none;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal {
+            background-color: white;
+            width: 300px;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<h1>Modal</h1>
+
+<p>Clique no botão abaixo para abrir o modal.</p>
+
+<button id="openModal">
+    Abrir Modal
+</button>
+
+<div id="overlay" class="modal-overlay">
+    <div class="modal">
+        <h2>Olá mundo!</h2>
+        <p>
+            Eu sou um modal.
+        </p>
+        <button id="closeModal">
+            Fechar
+        </button>
+    </div>
+</div>
+</body>
+<script>
+    let overlay = document.getElementById('overlay');
+
+    function abrirModal() {
+        overlay.style.display = 'flex';
+    }
+
+    function fecharModal() {
+        overlay.style.display = 'none';
+    }
+
+    document.getElementById('openModal').addEventListener('click', abrirModal);
+    document.getElementById('closeModal').addEventListener('click', fecharModal);
+</script>
+</html>
