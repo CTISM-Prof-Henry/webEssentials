@@ -14,30 +14,27 @@
     </style>
 </head>
 <body>
-
 <h1>Tema escuro</h1>
 
 <p>Clique no botão abaixo para trocar o tema.</p>
 
-<button id="themeButton">
+<button id="botao-tema">
     Trocar tema
 </button>
-
+</body>
 <script>
-    let ativo = true;
+    let tema_claro = true;  // começa com valor verdadeiro (true)
 
     function trocarTema() {
-        ativo = !ativo;
-        if(ativo) {
-            document.body.style.backgroundColor = '#fff';
-            document.body.style.color = '#222';
-        } else {
-            document.body.style.backgroundColor = '#222';
-            document.body.style.color = '#fff';
+        tema_claro = !tema_claro;  // troca de true pra false e de false pra true
+        if(tema_claro) {
+            document.body.style.backgroundColor = '#fff';  // plano de fundo branco
+            document.body.style.color = '#222';  // cor do texto preta
+        } else {  // senão, se é tema escuro
+            document.body.style.backgroundColor = '#222';  // cor fundo preta
+            document.body.style.color = '#fff';  // cor do texto branca
         }
     }
-    document.getElementById('themeButton').addEventListener('click', trocarTema);
+    document.getElementById('botao-tema').addEventListener('click', trocarTema);
 </script>
-
-</body>
 </html>
