@@ -26,7 +26,7 @@
     let imagens = document.getElementsByClassName('menor');  // array com 3 elementos
 
     for(let i = 0; i < imagens.length; i++) {
-        imagens[i].addEventListener('mouseover', () => {
+        imagens[i].addEventListener('mouseover', () => { // arrow function
             principal.src = imagens[i].src;
         });
     }

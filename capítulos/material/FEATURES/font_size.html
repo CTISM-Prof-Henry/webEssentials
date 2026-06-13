@@ -7,37 +7,36 @@
 </head>
 <body>
     <h1>Trocar fonte</h1>
-    
-    <p id="texto">
-        Use os botões abaixo para trocar o tamanho da fonte desse texto.
-    </p>
-    
+
     <button id="aumentar">
         A+
     </button>
-    
+
     <button id="diminuir">
         A-
     </button>
+
+    <p id="texto">
+        Use os botões abaixo para trocar o tamanho da fonte desse texto.
+    </p>
 </body>
 <script>
-    // size é uma variável "global". Ela está disponível dentro do contexto
-    // das funções, apesar de não ser passada por parâmetro para as funções
+    // size e text são variáveis "globais". Elas estão disponíveis dentro do
+    // contexto das funções, apesar de não serem passadas por parâmetro
     let size = 16;
+    let text = document.getElementById('texto');
+
     function aumentarFonte() {
-        let text = document.getElementById('texto');
         size += 2;
-        text.style.fontSize = size + "px";
+        text.style.fontSize = `${size}px`;
     }
 
     function diminuirFonte() {
-        let text = document.getElementById('texto');
         size -= 2;
-        text.style.fontSize = size + "px";
+        text.style.fontSize = `${size}px`;
     }
 
     document.getElementById('aumentar').addEventListener('click', aumentarFonte);
     document.getElementById('diminuir').addEventListener('click', diminuirFonte);
-
 </script>
 </html>
