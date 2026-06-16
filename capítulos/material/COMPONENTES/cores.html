@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cores</title>
+    <style>
+        /* definição de fonte global */
+        :root {
+            font-family: "Arial", "sans-serif";
+
+            --primary-100: #e7fbff;
+            --primary-300: #cff7ff;
+            --primary-500: #b8f3ff;
+            --primary-700: #25dbff;
+            --primary-900: #007a92;
+
+            --secondary-100: #ffebe7;
+            --secondary-300: #ffd7cf;
+            --secondary-500: #ffc4b8;
+            --secondary-700: #ff4a25;
+            --secondary-900: #921800;
+        }
+
+        .tile {
+            width: 25px;
+            height: 25px;
+        }
+
+        .table {
+            display: grid;
+
+            /* 2 colunas */
+            grid-template-columns: 30px 100px 30px auto;
+
+            gap: 10px;
+            align-items: center;
+        }
+
+    </style>
+</head>
+<body>
+<h1>Cores</h1>
+
+<p>Escolha uma paleta de cores para sua aplicação.</p>
+
+<p>
+    Use um site especializado de cores (por exemplo <a href="https://coolors.co">Coolors</a>) para
+    escolher uma paleta de cores. Depois, salve os <em>shades</em> em CSS para ter várias opções
+    de cores quando for usar. Você não precisa salvar todos os <em>shades</em>, mas é bom ter algumas
+    opções.
+</p>
+
+<p>
+    O site Coolors fornece várias informações, como harmonizações de uma cor, <em>shades</em>, dentre
+    outras funcionalidades. Explore!
+</p>
+
+<div class="table">
+    <div class="tile" style="background-color: var(--primary-100)"></div>
+    <div>primária 100</div>
+
+    <div class="tile" style="background-color: var(--secondary-100)"></div>
+    <div>secundária 100</div>
+
+    <div class="tile" style="background-color: var(--primary-300)"></div>
+    <div>primária 300</div>
+
+    <div class="tile" style="background-color: var(--secondary-300)"></div>
+    <div>secundária 300</div>
+
+    <div class="tile" style="background-color: var(--primary-500)"></div>
+    <div>primária 500</div>
+
+    <div class="tile" style="background-color: var(--secondary-500)"></div>
+    <div>secundária 500</div>
+
+    <div class="tile" style="background-color: var(--primary-700)"></div>
+    <div>primária 700</div>
+
+    <div class="tile" style="background-color: var(--secondary-700)"></div>
+    <div>secundária 700</div>
+
+    <div class="tile" style="background-color: var(--primary-900)"></div>
+    <div>primária 900</div>
+
+    <div class="tile" style="background-color: var(--secondary-900)"></div>
+    <div>secundária 900</div>
+</div>
+
+
+
+</body>
+</html>

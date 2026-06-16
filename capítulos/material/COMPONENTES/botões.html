@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Botões</title>
+    <style>
+        /* definição de fonte global */
+        :root {
+            font-family: "Arial", "sans-serif";
+        }
+
+        /* aplica esse estilo a todos os botões */
+        button {
+            color: black;  /* define cor do texto */
+            font-weight: bold;  /* define negrito no texto */
+            border: 0px;  /* remove linha da borda */
+            padding: 5px 10px;  /* padding no sentido vertical e horizontal */
+            border-radius: 5px;  /* bordas arredondadas */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* blur, offset x, offset y, RGBA */
+        }
+
+        /* aplica esse estilo a todos os botões quando passar o mouse por cima */
+        button:hover {
+            filter: brightness(90%);  /* escurece o botão ao passar o mouse por cima */
+        }
+
+        /* aplica esse estilo a todos os botões quando forem clicados */
+        button:active {
+            filter: brightness(80%);  /* escurece o botão ao passar o mouse por cima */
+            box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2); /* topo, direita, abaixo, esquerda */
+        }
+
+        .success {
+            background-color: #6BBF59;  /* define cor do fundo */
+        }
+
+        .error {
+            background-color: #F6511D;
+        }
+
+        .info {
+            background-color: #54DEFD;
+        }
+
+        .warning {
+            background-color: #FBAF00;
+        }
+    </style>
+</head>
+<body>
+<h1>Botões</h1>
+
+<p>Você pode definir um conjunto de botões reutilizáveis para sua aplicação.</p>
+
+<button id="success" class="success">
+    Sucesso
+</button>
+
+<button id="error" class="error">
+    Erro
+</button>
+
+<button id="warning" class="warning">
+    Alerta
+</button>
+
+<button id="info" class="info">
+    Informação
+</button>
+
+</body>
+</html>

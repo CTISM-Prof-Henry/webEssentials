@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Espaçamento</title>
+    <style>
+        /* definição de fonte global */
+        :root {
+            font-family: "Arial", "sans-serif";
+        }
+
+        .bar {
+            background-color: white;
+            margin: 5px;
+            height: 2rem;
+            border: 2px solid darkslategrey;
+        }
+
+    </style>
+</head>
+<body>
+<h1>Espaçamento</h1>
+
+<p>Adote um espaçamento padronizado para sua aplicação. De preferência, use valores que podem ser divididos/multiplicados facilmente (por exemplo, 8px).</p>
+
+<p>Prefira unidades relativas ao invés de unidades absolutas (apesar de não ter problema usar qualquer um dos dois tipos!)</p>
+
+<h2>Unidades absolutas</h2>
+
+<ul>
+    <li> <code>10px</code> pixels: unidade de medida de uma tela</li>
+    <li><code>12pt</code> pontos: unidade de tamanho em documentos impressos</li>
+    <li><code>5cm</code> centímetros: cada cm equivale a 37.8px</li>
+    <li><code>2in</code> polegadas (inches): cada polegada equivale a 96px</li>
+</ul>
+
+
+<h2>Unidades relativas</h2>
+
+<ul>
+    <li><code>1rem</code> equivale ao tamanho da fonte-padrão da página (por padrão, 16 pixels, a menos que seja alterada)</li>
+    <li> <code>1em</code> equivale ao tamanho da fonte-padrão do container em que o elemento se insere</li>
+    <li><code>50%</code> 50% do espaço disponível</li>
+    <li><code>10vw</code> largura da janela de visualização (view width)</li>
+    <li><code>10vh</code> altura da janela de visualização (view height)</li>
+</ul>
+
+<form>
+    <label for="font-size">Troque o <code>font-size</code> do documento aqui:</label>
+    <input type="number" name="font-size-document" placeholder="16px" value="16">
+    <br/>
+    <label for="font-size">Troque o <code>font-size</code> do elemento aqui:</label>
+    <input type="number" name="font-size-parent" placeholder="16px" value="16">
+</form>
+
+<div class="bar" style="width: 5px">5px</div>
+<div class="bar" style="width: 5pt">5pt</div>
+<div class="bar" style="width: 5cm">5cm</div>
+<div class="bar" style="width: 5in">5in</div>
+
+<div class="bar" style="width: 5rem">5rem</div>
+<div class="bar" style="width: 5em">5em</div>
+<div class="bar" style="width: 5%">5%</div>
+<div class="bar" style="width: 5vw">5vw</div>
+
+
+</body>
+</html>
