@@ -10,6 +10,10 @@
             font-family: "Arial", "sans-serif";
         }
 
+        span {
+            padding: 1px 3px;
+        }
+
         .bar {
             background-color: white;
             margin: 5px;
@@ -47,23 +51,45 @@
 </ul>
 
 <form>
-    <label for="font-size">Troque o <code>font-size</code> do documento aqui:</label>
-    <input type="number" name="font-size-document" placeholder="16px" value="16">
-    <br/>
-    <label for="font-size">Troque o <code>font-size</code> do elemento aqui:</label>
-    <input type="number" name="font-size-parent" placeholder="16px" value="16">
+<div style="margin:5px">
+    <label for="font-size">Troque o <code>font-size</code> de <span style="border: 1px solid lightgrey;">todo o documento</span> aqui:</label>
+    <input type="number" id="font-size-document" name="font-size-document" placeholder="16px" value="16">
+</div>
+<div style="margin:5px">
+    <label for="font-size">Troque o <code>font-size</code> do <span style="background-color: lightblue">container pai</span> aqui:</label>
+    <input type="number" id="font-size-parent" name="font-size-parent" placeholder="16px" value="16">
+</div>
+<div style="margin:5px">
+    <label for="parent-width">Troque o comprimento do <span style="background-color: lightblue">container pai</span> aqui:</label>
+    <input type="number" id="parent-width" name="parent-width" placeholder="300px" value="300">
+</div>
 </form>
 
+<div id="parent" style="background-color: lightblue; padding: 5px; width: 300px">
 <div class="bar" style="width: 5px">5px</div>
 <div class="bar" style="width: 5pt">5pt</div>
 <div class="bar" style="width: 5cm">5cm</div>
 <div class="bar" style="width: 5in">5in</div>
-
 <div class="bar" style="width: 5rem">5rem</div>
 <div class="bar" style="width: 5em">5em</div>
 <div class="bar" style="width: 5%">5%</div>
 <div class="bar" style="width: 5vw">5vw</div>
-
-
+</div>
 </body>
+<script type="application/javascript">
+    document.getElementById('font-size-document').addEventListener('change', (event) => {
+        console.log(event.target.value);
+        document.documentElement.style.fontSize = `${event.target.value}px`;
+    });
+
+    document.getElementById('font-size-parent').addEventListener('change', (event) => {
+        console.log(event.target.value);
+        document.getElementById('parent').style.fontSize = `${event.target.value}px`;
+    });
+
+    document.getElementById('parent-width').addEventListener('change', (event) => {
+        console.log(event.target.value);
+        document.getElementById('parent').style.width = `${event.target.value}px`;
+    });
+</script>
 </html>
