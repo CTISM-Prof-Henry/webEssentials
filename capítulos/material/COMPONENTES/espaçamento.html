@@ -8,88 +8,121 @@
         /* definição de fonte global */
         :root {
             font-family: "Arial", "sans-serif";
+
+            /* Escala de espaçamento */
+            --space-xs: 0.25rem; /* 4px */
+            --space-sm: 0.5rem; /* 8px */
+            --space-md: 1rem; /* 16px */
+            --space-lg: 1.5rem; /* 24px */
+            --space-xl: 2rem; /* 32px */
+
+            /* Raios */
+            --radius-md: 0.5rem;
+
+            /* Cores */
+            --primary-500: #AED4E6;
+            --primary-600: #7ab9d6;
+            --primary-700: #469ec6;
         }
 
-        span {
-            padding: 1px 3px;
+        .table {
+            display: grid;
+
+            /* 2 colunas */
+            grid-template-columns: 11rem auto;
+
+            gap: 10px;
+            align-items: flex-start;
         }
 
-        .bar {
-            background-color: white;
-            margin: 5px;
-            height: 2rem;
-            border: 2px solid darkslategrey;
+        .card {
+            display: flex;
+            flex-direction: column;
+            width: 25rem;
+            padding: var(--space-lg);
+            border-radius: var(--radius-md);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, .15);
         }
 
+        .card-title {
+            margin: 0 0 var(--space-sm) 0;
+        }
+
+        .card-subtitle {
+            margin: 0 0 var(--space-md) 0;
+            color: #666;
+        }
+
+        .card-content {
+            margin: 0 0 var(--space-lg) 0;
+            line-height: 1.5;
+        }
+
+        /* aplica esse estilo a todos os botões */
+        .card-button {
+            color: white;  /* define cor do texto */
+            background-color: var(--primary-500);  /* define cor do fundo */
+            font-weight: bold;  /* define negrito no texto */
+            border: none;  /* remove linha da borda */
+            padding: var(--space-sm) var(--space-md);  /* padding no sentido vertical e horizontal */
+            border-radius: var(--radius-md);  /* bordas arredondadas */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* blur, offset x, offset y, RGBA */
+        }
+
+        /* aplica esse estilo a todos os botões quando passar o mouse por cima */
+        .card-button:hover {
+            background-color: var(--primary-600);  /* escurece o botão ao passar o mouse por cima */
+        }
+
+        /* aplica esse estilo a todos os botões quando forem clicados */
+        .card-button:active {
+            background-color: var(--primary-700);  /* escurece o botão ao passar o mouse por cima */
+            box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2); /* topo, direita, abaixo, esquerda */
+        }
     </style>
 </head>
 <body>
 <h1>Espaçamento</h1>
 
-<p>Adote um espaçamento padronizado para sua aplicação. De preferência, use valores que podem ser divididos/multiplicados facilmente (por exemplo, 8px).</p>
+<p>Adote um espaçamento padronizado para sua aplicação. De preferência, use valores que podem ser
+    divididos/multiplicados facilmente (por exemplo, 8px).</p>
 
-<p>Prefira unidades relativas ao invés de unidades absolutas (apesar de não ter problema usar qualquer um dos dois tipos!)</p>
+<p>Prefira unidades relativas ao invés de unidades absolutas (apesar de não ter problema usar qualquer um dos dois
+    tipos!)</p>
 
-<h2>Unidades absolutas</h2>
+<h2>Recomendações</h2>
 
-<ul>
-    <li> <code>10px</code> pixels: unidade de medida de uma tela</li>
-    <li><code>12pt</code> pontos: unidade de tamanho em documentos impressos</li>
-    <li><code>5cm</code> centímetros: cada cm equivale a 37.8px</li>
-    <li><code>2in</code> polegadas (inches): cada polegada equivale a 96px</li>
-</ul>
-
-
-<h2>Unidades relativas</h2>
-
-<ul>
-    <li><code>1rem</code> equivale ao tamanho da fonte-padrão da página (por padrão, 16 pixels, a menos que seja alterada)</li>
-    <li> <code>1em</code> equivale ao tamanho da fonte-padrão do container em que o elemento se insere</li>
-    <li><code>50%</code> 50% do espaço disponível</li>
-    <li><code>10vw</code> largura da janela de visualização (view width)</li>
-    <li><code>10vh</code> altura da janela de visualização (view height)</li>
-</ul>
-
-<form>
-<div style="margin:5px">
-    <label for="font-size">Troque o <code>font-size</code> de <span style="border: 1px solid lightgrey;">todo o documento</span> aqui:</label>
-    <input type="number" id="font-size-document" name="font-size-document" placeholder="16px" value="16">
+<div class="table">
+    <div>Texto</div>
+    <div><code>rem</code></div>
+    <div>Espaçamentos</div>
+    <div><code>rem</code></div>
+    <div>Larguras flexíveis</div>
+    <div><code>vw</code></div>
+    <div>Altura</div>
+    <div><code>vh</code></div>
+    <div>Bordas</div>
+    <div><code>px</code></div>
 </div>
-<div style="margin:5px">
-    <label for="font-size">Troque o <code>font-size</code> do <span style="background-color: lightblue">container pai</span> aqui:</label>
-    <input type="number" id="font-size-parent" name="font-size-parent" placeholder="16px" value="16">
-</div>
-<div style="margin:5px">
-    <label for="parent-width">Troque o comprimento do <span style="background-color: lightblue">container pai</span> aqui:</label>
-    <input type="number" id="parent-width" name="parent-width" placeholder="300px" value="300">
-</div>
-</form>
 
-<div id="parent" style="background-color: lightblue; padding: 5px; width: 300px">
-<div class="bar" style="width: 5px">5px</div>
-<div class="bar" style="width: 5pt">5pt</div>
-<div class="bar" style="width: 5cm">5cm</div>
-<div class="bar" style="width: 5in">5in</div>
-<div class="bar" style="width: 5rem">5rem</div>
-<div class="bar" style="width: 5em">5em</div>
-<div class="bar" style="width: 5%">5%</div>
-<div class="bar" style="width: 5vw">5vw</div>
+<h2>Exemplo</h2>
+
+<div class="card">
+    <h2 class="card-title">Curso de Desenvolvimento Web</h2>
+
+    <p class="card-subtitle">
+        Aula 5 - Componentes e Design System
+    </p>
+
+    <p class="card-content">
+        Nesta aula aprenderemos sobre espaçamento, cores,
+        tipografia e reutilização de componentes.
+    </p>
+
+    <button class="card-button">
+        Ver detalhes
+    </button>
 </div>
+
 </body>
-<script type="application/javascript">
-    document.getElementById('font-size-document').addEventListener('change', (event) => {
-        console.log(event.target.value);
-        document.documentElement.style.fontSize = `${event.target.value}px`;
-    });
-
-    document.getElementById('font-size-parent').addEventListener('change', (event) => {
-        console.log(event.target.value);
-        document.getElementById('parent').style.fontSize = `${event.target.value}px`;
-    });
-
-    document.getElementById('parent-width').addEventListener('change', (event) => {
-        console.log(event.target.value);
-        document.getElementById('parent').style.width = `${event.target.value}px`;
-    });
-</script>
 </html>
