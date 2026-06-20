@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Local Storage</title>
+</head>
+<body>
+
+<h1>Local Storage</h1>
+
+<p>
+    Local storage é uma maneira de armazenar dados persistentes no navegador, sem que precisem ser enviados para um
+    servidor externo.
+</p>
+
+<p>
+    Faça um teste. Troque a cor de fundo desta página e fecha a janela do navegador. Depois, abra novamente esta página
+    e veja se suas preferências foram salvas.
+</p>
+
+<form>
+    <label for="select-cor">Cor:</label>
+    <select id="select-cor" name="select-cor">
+        <option value="white">Branco</option>
+        <option value="lightblue">Azul claro</option>
+        <option value="lightgreen">Verde claro</option>
+        <option value="lightyellow">Amarelo claro</option>
+        <option value="lightpink">Rosa claro</option>
+    </select>
+</form>
+</body>
+<script>
+
+    /**
+     * Troca a cor do plano de fundo quando uma nova cor é selecionada.
+     * Salva também a cor selecionada no local storage.
+     * @param event Evento que disparou a função
+     */
+    function changeBackgroundColor(event) {
+        const color = event.target.value;
+        localStorage.setItem('select-cor', color);
+        document.body.style.backgroundColor = color;
+    }
+    // adiciona um event Listener ao select de cor
+    document.getElementById("select-cor").addEventListener("change", changeBackgroundColor);
+
+    /**
+     * Função que é disparada quando a página termina de carregar.
+     * Verifica se tem uma cor salva no local storage. Se tiver, troca a cor do plano de fundo para a cor salva.
+     * @param event
+     */
+    function onPageLoad(event) {
+        const savedColor = localStorage.getItem('select-cor');
+        if (savedColor) {
+            document.body.style.backgroundColor = savedColor;
+            document.getElementById("select-cor").value = savedColor;
+        }
+    }
+    // adiciona um event Listener quando a página termina de carregar
+    document.addEventListener("DOMContentLoaded", onPageLoad);
+
+</script>
+</html>
