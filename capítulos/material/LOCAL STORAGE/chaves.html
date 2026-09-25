@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Local Storage</title>
+</head>
+<body>
+<h1>Local Storage</h1>
+
+<p>Exemplo de como usar local storage.</p>
+
+<form onsubmit="return false">
+    <label for="input-chave">Chave:</label>
+    <input type="text" name="input-chave" id="input-chave">
+    <br/>
+    <br/>
+    <label for="input-chave">Valor:</label>
+    <input type="text" name="input-valor" id="input-valor">
+    <br/>
+    <br/>
+    <input type="submit" id="button-enviar" value="Enviar">
+    <input type="button" id="button-limpar" value="Limpar">
+</form>
+
+<h2>Chaves e valores armazenados</h2>
+<p id="paragrafo-valores">Nenhum valor armazenado.</p>
+</body>
+<script type="application/javascript">
+    function salvarValor(event) {
+        event.preventDefault();
+        const chave = document.getElementById('input-chave').value;
+        const valor = document.getElementById('input-valor').value;
+        localStorage.setItem(chave, valor);
+    }
+    function mostrarValores() {
+        let array = [];
+        let pairs = Object.entries(localStorage);
+        for (let i = 0; i < pairs.length; i++) {
+            array.push(`${pairs[i][0]}=${pairs[i][1]}`);
+        }
+        document.getElementById('paragrafo-valores').innerHTML = array.join('<br/>');
+    }
+    function limparValores() {
+        console.log('limpado!');
+        localStorage.clear();
+        mostrarValores();
+    }
+
+    document.getElementById('button-enviar').addEventListener('click', salvarValor);
+    document.getElementById('button-enviar').addEventListener('click', mostrarValores);
+    document.getElementById('button-limpar').addEventListener('click', limparValores);
+    mostrarValores();
+</script>
+</html>
